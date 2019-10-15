@@ -14,9 +14,19 @@
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">系统管理</a>
                 <dl class="layui-nav-child">
+<<<<<<< HEAD
                     <dd><a href="${ctx}/sys/user/to/list">用户管理</a></dd>
                     <dd><a href="${ctx}/role/to/list">角色管理</a></dd>
 
+=======
+                    <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
+                    <dd><a href="${ctx}">角色管理</a></dd>
+                    <dd><a href="${ctx}">权限管理</a></dd>
+                    <dd><a href="${ctx}">商品管理</a></dd>
+                    <dd><a href="${ctx}">商品套餐管理</a></dd>
+                    <dd><a href="${ctx}">基础数据</a></dd>
+                    <dd><a href="${ctx}">数据字典</a></dd>
+>>>>>>> 24a242b904e43e687c4754367365e7f319f72894
                 </dl>
             </li>
             <li class="layui-nav-item">
@@ -31,29 +41,35 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">电子银行</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="${ctx}">汇款充值</a></dd>
+                    <dd><a href="${ctx}">基本账户</a></dd>
+                    <dd><a href="${ctx}">消费账户</a></dd>
+                    <dd><a href="${ctx}">内部转账</a></dd>
+                    <dd><a href="${ctx}">申请提现</a></dd>
+                    <dd><a href="${ctx}">体现明细</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">购物管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="${ctx}">列表一</a></dd>
+                    <dd><a href="${ctx}">列表二</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">信息查询</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="${ctx}">奖励查询</a></dd>
+                    <dd><a href="${ctx}">推荐查询</a></dd>
+                    <dd><a href="${ctx}">区域查询</a></dd>
+                    <dd><a href="${ctx}">操作须知</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">咨询管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="${ctx}">列表一</a></dd>
+                    <dd><a href="${ctx}">列表二</a></dd>
                 </dl>
             </li>
 

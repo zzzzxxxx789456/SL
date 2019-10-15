@@ -4,10 +4,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * @author 邱道长
- * @since 2019/8/7
- */
+
 @WebListener
 public class MyAppListener implements ServletContextListener {
 

@@ -20,10 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * @author 邱道长
- * @since 2019/8/7
- */
+
 @Configuration
 @PropertySource(value = "classpath:db.properties")
 // 使用通用mapper下的注解
