@@ -14,18 +14,18 @@
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">系统管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}">用户管理</a></dd>
-                    <dd><a href="${ctx}">角色管理</a></dd>
+                    <dd><a href="${ctx}/sys/user/to/list">用户管理</a></dd>
+                    <dd><a href="${ctx}/role/to/list">角色管理</a></dd>
 
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">会员管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}">注册新会员</a></dd>
-                    <dd><a href="${ctx}">新会员管理</a></dd>
-                    <dd><a href="${ctx}">修改本人资料</a></dd>
-                    <dd><a href="${ctx}">修改本人密码</a></dd>
+                    <dd><a href="${ctx}/user/to/register">注册新会员</a></dd>
+                    <dd><a href="${ctx}/u/to/list">新会员管理</a></dd>
+                    <dd><a href="${ctx}/u/to/modify">修改本人资料</a></dd>
+                    <dd><a href="${ctx}/u/to/modify/pwd">修改本人密码</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">

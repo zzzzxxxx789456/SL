@@ -22,7 +22,7 @@ import java.util.List;
  * 总配置类
  */
 @Configuration
-@ComponentScan(basePackages = {"com.qiudaozhang.service","com.qiudaozhang.components"})
+@ComponentScan(basePackages = {"com.qiudaozhang.service"})
 @Import({MybatisConfig.class,SpringMvcConfig.class})// 导入其它的配置类
 @EnableWebMvc
 public class AppConfig implements WebMvcConfigurer {
