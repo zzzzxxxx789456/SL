@@ -2,10 +2,7 @@ package com.qiudaozhang.dto;
 
 import lombok.Data;
 
-/**
- * @author 邱道长
- * @since 2019/8/7
- */
+
 @Data
 public class ResponseCode {
 
