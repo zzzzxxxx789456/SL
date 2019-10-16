@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * au_user
@@ -21,7 +22,7 @@ public class AuUser implements Serializable {
     /**
      * 登录账号
      */
-    private String logincode;
+    private String loginCode;
 
     /**
      * 登录密码（初始密码为证件号码后六位）
@@ -36,7 +37,7 @@ public class AuUser implements Serializable {
     /**
      * 用户真实姓名
      */
-    private String username;
+    private String userName;
 
     /**
      * 性别
@@ -46,22 +47,22 @@ public class AuUser implements Serializable {
     /**
      * 生日
      */
-    private Date birthday;
+    private LocalDateTime birthday;
 
     /**
      * 证件类型id
      */
-    private String cardtype;
+    private String cardType;
 
     /**
      * 证件类型名称
      */
-    private String cardtypename;
+    private String cardTypeName;
 
     /**
      * 证件号码
      */
-    private String idcard;
+    private String idCard;
 
     /**
      * 收货国家
@@ -81,87 +82,108 @@ public class AuUser implements Serializable {
     /**
      * 收获地址
      */
-    private String useraddress;
+    private String userAddress;
 
     /**
      * 邮编
      */
-    private String postcode;
+    private String postCode;
 
     /**
      * 注册时间
      */
-    private Date createtime;
+    private LocalDateTime createTime;
 
     /**
      * 推荐人id（默认为当前登录用户id）
      */
-    private Long referid;
+    private Long referId;
 
     /**
      * 推荐人编码（默认为当前登录用户loginCode）
      */
-    private String refercode;
+    private String referCode;
 
     /**
      * 所属角色ID
      */
-    private Long roleid;
+    private Long roleId;
 
     /**
      * 所属角色名称
      */
-    private String rolename;
+    private String roleName;
 
     /**
      * 用户类型id
      */
-    private String usertype;
+    private String userType;
 
     /**
      * 用户类型名称
      */
-    private String usertypename;
+    private String userTypeName;
 
     /**
      * 是否启用（1、启用2、未启用）
      */
-    private Integer isstart;
+    private Integer isStart;
 
     /**
      * 最新更新时间
      */
-    private Date lastupdatetime;
+    private LocalDateTime lastUpdateTime;
 
     /**
      * 最后登录时间
      */
-    private Date lastlogintime;
+    private LocalDateTime lastLoginTime;
 
     /**
      * 开户卡号
      */
-    private String bankaccount;
+    private String bankAccount;
 
     /**
      * 开户行
      */
-    private String bankname;
+    private String bankName;
 
     /**
      * 开户人
      */
-    private String accountholder;
+    private String accountHolder;
 
     /**
-     * 身份证照片存放路径
+     * 身份证照片反面图路径
      */
-    private String idcardpicpath;
+    private String idCardPicNegPath;
+
+    /**
+     * 身份证照片正面图路径
+     */
+    private String idCardPicPosPath;
 
     /**
      * 银行卡照片存放路径
      */
-    private String bankpicpath;
+    private String bankPicPath;
+
+    /**
+     * 推荐人
+     */
+    private AuUser recommender;
+
+    private static final long serialVersionUID = 1L;
+
+    public String getCreateTimeStr(){
+        return this.createTime.toLocalDate() + " " + (this.createTime.toLocalTime().toString().equals("00:00") ? "00:00:00":this.createTime.toLocalTime());
+    }
 
 
+    public String getLastUpdateTimeStr(){
+        if(this.lastUpdateTime == null)
+            return "";
+        return this.lastUpdateTime.toLocalDate() + " " + (this.lastUpdateTime.toLocalTime().toString().equals("00:00") ? "00:00:00":this.lastUpdateTime.toLocalTime());
+    }
 }
