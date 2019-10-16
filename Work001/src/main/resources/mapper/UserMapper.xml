@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiudaozhang.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.qiudaozhang.model.User">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="login_Code" jdbcType="VARCHAR" property="loginCode"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="password2" jdbcType="VARCHAR" property="password2"/>
+        <result column="user_Name" jdbcType="VARCHAR" property="userName"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+        <result column="birthday" jdbcType="DATE" property="birthday"/>
+        <result column="card_Type" jdbcType="VARCHAR" property="cardType"/>
+        <result column="card_Type_Name" jdbcType="VARCHAR" property="cardTypeName"/>
+        <result column="id_Card" jdbcType="VARCHAR" property="idCard"/>
+        <result column="country" jdbcType="VARCHAR" property="country"/>
+        <result column="mobile" jdbcType="VARCHAR" property="mobile"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="user_Address" jdbcType="VARCHAR" property="userAddress"/>
+        <result column="post_Code" jdbcType="VARCHAR" property="postCode"/>
+        <result column="create_Time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="refer_Id" jdbcType="BIGINT" property="referId"/>
+        <result column="refer_Code" jdbcType="VARCHAR" property="referCode"/>
+        <result column="role_Id" jdbcType="BIGINT" property="roleId"/>
+        <result column="role_Name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="user_Type" jdbcType="VARCHAR" property="userType"/>
+        <result column="user_Type_Name" jdbcType="VARCHAR" property="userTypeName"/>
+        <result column="is_Start" jdbcType="INTEGER" property="isStart"/>
+        <result column="last_Update_Time" jdbcType="TIMESTAMP" property="lastUpdateTime"/>
+        <result column="last_Login_Time" jdbcType="TIMESTAMP" property="lastLoginTime"/>
+        <result column="bank_Account" jdbcType="VARCHAR" property="bankAccount"/>
+        <result column="bank_Name" jdbcType="VARCHAR" property="bankName"/>
+        <result column="account_Holder" jdbcType="VARCHAR" property="accountHolder"/>
+        <result column="id_Card_Pic_neg_Path" jdbcType="VARCHAR" property="idCardPicNegPath"/>
+        <result column="id_Card_Pic_pos_Path" jdbcType="VARCHAR" property="idCardPicPosPath"/>
+        <result column="bank_Pic_Path" jdbcType="VARCHAR" property="bankPicPath"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, login_Code, `password`, password2, user_Name, sex, birthday, card_Type, card_Type_Name, 
+    id_Card, country, mobile, email, user_Address, post_Code, create_Time, refer_Id, 
+    refer_Code, role_Id, role_Name, user_Type, user_Type_Name, is_Start, last_Update_Time, 
+    last_Login_Time, bank_Account, bank_Name, account_Holder, id_Card_Pic_neg_Path, id_Card_Pic_pos_Path, 
+    bank_Pic_Path
+  </sql>
+    <insert id="insert">
+        insert into au_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="loginCode != null and loginCode != ''">
+                login_code,
+            </if>
+            <if test="userName != null and userName != ''">
+                user_Name,
+            </if>
+            <if test="password != null and password != ''">
+                password,
+            </if>
+            <if test="password2 != null and password2 != ''">
+                password2,
+            </if>
+            <if test="idCard != null and idCard != ''">
+                id_Card,
+            </if>
+            <if test="cardType != null and cardType != ''">
+                card_Type,
+            </if>
+            <if test="cardTypeName != null and cardTypeName != ''">
+                card_Type_Name,
+            </if>
+            <if test="mobile != null and mobile != ''">
+                mobile,
+            </if>
+            <if test="email != null and email != ''">
+                email,
+            </if>
+            <if test="postCode != null and postCode != ''">
+                post_Code,
+            </if>
+            <if test="referId != null  ">
+                refer_id,
+            </if>
+            <if test="referCode != null and referCode != '' ">
+                refer_Code,
+            </if>
+            <if test="country != null and country != '' ">
+                country,
+            </if>
+            <if test="bankName != null and bankName != '' ">
+                bank_Name,
+            </if>
+            <if test="accountHolder != null and accountHolder != '' ">
+                account_Holder,
+            </if>
+            <if test="bankAccount != null and bankAccount != '' ">
+                bank_Account,
+            </if>
+            <if test="idCardPicPosPath != null and idCardPicPosPath != '' ">
+                id_Card_Pic_Pos_Path,
+            </if>
+            <if test="idCardPicNegPath != null and idCardPicNegPath != '' ">
+                id_Card_Pic_Neg_Path,
+            </if>
+            <if test="bankPicPath != null and bankPicPath != '' ">
+                bank_Pic_Path,
+            </if>
+            <if test="userAddress != null and userAddress != '' ">
+                user_Address,
+            </if>
+            <if test="createTime != null   ">
+                create_Time,
+            </if>
+            <!-- 新增对角色和会员类型的处理 -->
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="roleName != null and roleName != ''" >
+                role_Name,
+            </if>
+            <if test="userType != null " >
+                user_Type,
+            </if>
+            <if test="userTypeName != null " >
+                user_Type_Name,
+            </if>
+        </trim>
+        <trim prefix="value(" suffix=")" suffixOverrides=",">
+            <if test="loginCode != null and loginCode != ''">
+                #{loginCode},
+            </if>
+            <if test="userName != null and userName != ''">
+                #{userName},
+            </if>
+            <if test="password != null and password != ''">
+                #{password},
+            </if>
+            <if test="password2 != null and password2 != ''">
+                #{password2},
+            </if>
+            <if test="idCard != null and idCard != ''">
+                #{idCard},
+            </if>
+            <if test="cardType != null and cardType != ''">
+                #{cardType},
+            </if>
+            <if test="cardTypeName != null and cardTypeName != ''">
+                #{cardTypeName},
+            </if>
+            <if test="mobile != null and mobile != ''">
+                #{mobile},
+            </if>
+            <if test="email != null and email != ''">
+                #{email},
+            </if>
+            <if test="postCode != null and postCode != ''">
+                #{postCode},
+            </if>
+            <if test="referId != null  ">
+                #{referId},
+            </if>
+            <if test="referCode != null and referCode != '' ">
+                #{referCode},
+            </if>
+            <if test="country != null and country != '' ">
+                #{country},
+            </if>
+            <if test="bankName != null and bankName != '' ">
+                #{bankName},
+            </if>
+            <if test="accountHolder != null and accountHolder != '' ">
+                #{accountHolder},
+            </if>
+            <if test="bankAccount != null and bankAccount != '' ">
+                #{bankAccount},
+            </if>
+            <if test="idCardPicPosPath != null and idCardPicPosPath != '' ">
+                #{idCardPicPosPath},
+            </if>
+            <if test="idCardPicNegPath != null and idCardPicNegPath != '' ">
+                #{idCardPicNegPath},
+            </if>
+            <if test="bankPicPath != null and bankPicPath != '' ">
+                #{bankPicPath},
+            </if>
+            <if test="userAddress != null and userAddress != '' ">
+                #{userAddress},
+            </if>
+            <if test="createTime != null   ">
+                #{createTime},
+            </if>
+
+            <!-- 新增对角色和会员类型的处理 -->
+            <if test="roleId != null">
+                #{roleId},
+            </if>
+            <if test="roleName != null and roleName != ''" >
+                #{roleName},
+            </if>
+            <if test="userType != null " >
+                #{userType},
+            </if>
+            <if test="userTypeName != null " >
+                #{userTypeName},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateLoginTime">
+        update au_user
+        <set>
+            last_Login_Time =#{now}
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+    <select id="findByLoginCode" resultType="com.qiudaozhang.model.User">
+    select id, login_Code, password, password2, user_Name
+    from au_user
+    where login_Code=#{loginCode}
+  </select>
+    <select id="findByUserName" resultType="com.qiudaozhang.model.User">
+        select  id ,login_code
+        from au_user
+        where user_name = #{userName}
+    </select>
+</mapper>

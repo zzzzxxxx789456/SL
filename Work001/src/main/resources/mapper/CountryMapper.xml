@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiudaozhang.mapper.CountryMapper">
+  <resultMap id="BaseResultMap" type="com.qiudaozhang.model.Country">
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="zh_name" jdbcType="VARCHAR" property="zhName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="code2" jdbcType="VARCHAR" property="code2" />
+    <result column="is_show" jdbcType="TINYINT" property="isShow" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `name`, zh_name, code, code2, is_show
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Short" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ds_country
+    where id = #{id,jdbcType=SMALLINT}
+  </select>
+    <select id="findAll" resultType="com.qiudaozhang.model.Country">
+      SELECT ID, NAME, ZH_NAME, CODE, CODE2, IS_SHOW
+      FROM ds_country
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Short">
+    delete from ds_country
+    where id = #{id,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qiudaozhang.model.Country" useGeneratedKeys="true">
+    insert into ds_country (`name`, zh_name, code, 
+      code2, is_show)
+    values (#{name,jdbcType=VARCHAR}, #{zhName,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{code2,jdbcType=VARCHAR}, #{isShow,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qiudaozhang.model.Country" useGeneratedKeys="true">
+    insert into ds_country
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="zhName != null">
+        zh_name,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="code2 != null">
+        code2,
+      </if>
+      <if test="isShow != null">
+        is_show,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="zhName != null">
+        #{zhName,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="code2 != null">
+        #{code2,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        #{isShow,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qiudaozhang.model.Country">
+    update ds_country
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="zhName != null">
+        zh_name = #{zhName,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="code2 != null">
+        code2 = #{code2,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        is_show = #{isShow,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qiudaozhang.model.Country">
+    update ds_country
+    set `name` = #{name,jdbcType=VARCHAR},
+      zh_name = #{zhName,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      code2 = #{code2,jdbcType=VARCHAR},
+      is_show = #{isShow,jdbcType=TINYINT}
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+</mapper>
