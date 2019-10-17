@@ -5,9 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>用户管理</title>
+    <title>layout 后台大布局 - Layui</title>
     <link rel="stylesheet" href="${ctx}/layui/css/layui.css">
-    <script src="${ctx}/layui/layui.js"></script>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -17,7 +16,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
-            <a href="${ctx}/sys/u/to/add" class="layui-btn">新增</a>
+            <a href="${ctx}/role/to/add" class="layui-btn">新增</a>
             <form class="layui-form">
                 <div class="layui-form-item">
                     <div class="layui-input-block">
@@ -27,10 +26,6 @@
                 </div>
             </form>
             <table class="layui-hide" id="demo" lay-filter="test" ></table>
-            <script type="text/html" id="barDemo">
-                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-            </script>
             <script type="text/html" id="toolbarDemo">
                 <div class="layui-btn-container">
                     <button class="layui-btn layui-btn-sm" lay-event="getCheckData">删除选中项</button>
@@ -38,7 +33,12 @@
                     <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
                 </div>
             </script>
+            <script type="text/html" id="barDemo" >
+                <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
             <script type="text/html" id="checkboxTpl">
+                <!-- 这里的 checked 的状态只是演示 -->
                 <input type="checkbox" name="isStart" value="{{d.isStart}}" title="启用" lay-filter="lockDemo" {{ d.isStart == 1 ? 'checked' : '' }}>
             </script>
         </div>
@@ -48,7 +48,7 @@
             © layui.com - 底部固定区域
         </div>
     </div>
-
+    <script src="${ctx}/layui/layui.js"></script>
     <script>
         //JavaScript代码区域
         layui.use(['element','form','table','jquery','layer'], function(){
@@ -63,19 +63,16 @@
             function renderTable(){
                 table.render({
                     elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
+                    ,url: '${ctx}/role/list' //数据接口
                     ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
                     ,page: true //开启分页
                     ,cols: [[ //表头
                         {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'id', title: '角色编号', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'roleName', title: '角色名称', width:180}
+                        ,{field: 'createdBy', title: '创建人', width:180}
                         // 手机号码中间四位保护
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
                         ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
-                        ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
                     ]]
                 });
             }
@@ -95,7 +92,7 @@
                             "ids":ids
                         }
                         $.ajax({
-                            url:'${ctx}/sys/u/delGroup',
+                            url:'${ctx}/role/delGroup',
                             type:'post',
                             contentType:'application/json',
                             data:JSON.stringify(data),
@@ -121,60 +118,6 @@
                 };
             });
 
-            //监听行工具事件
-            table.on('tool(test)', function(obj){
-                var data = obj.data;
-                //console.log(obj)
-                if(obj.event === 'del'){
-                    layer.confirm('真的删除行么', function(index){
-                        // 异步请求删除
-                        $.ajax({
-                            url:'${ctx}/u/del/'+data.id,
-                            type:'post',
-                            success:function (data) {
-                                if(data.code == 2000){
-
-
-                                    renderTable();
-                                    layer.msg(data.msg)
-                                    layer.close(index);
-                                    // obj.del();
-
-                                } else {
-                                    layer.msg(data.msg)
-                                }
-                            }
-                        })
-
-                    });
-                } else if(obj.event === 'edit'){
-
-                }
-            });
-
-
-            // 添加查询事件
-            $('#queryBtn').click(function () {
-                var loginCode = $('input[name=loginCode]').val();
-                table.render({
-                    elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
-                    ,page: true //开启分页
-                    ,cols: [[ //表头
-                        {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
-                        ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
-                        ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
-                    ]],
-                    where:{
-                        loginCode:loginCode
-                    }
-                });
-            })
         });
     </script>
 </body>

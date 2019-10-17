@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 61048
-  Date: 2019/10/15
-  Time: 11:34
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -41,9 +34,9 @@
                     <label class="layui-form-label">证件类型</label>
                     <div class="layui-input-inline">
                         <select name="cardType" lay-verify="">
-                            <c:forEach items="${cardTypes}" var="obj">
-                                <option value="${obj.valueId}">${obj.valueName}</option>
-                            </c:forEach>
+                           <c:forEach items="${cardTypes}" var="obj">
+                               <option value="${obj.valueId}">${obj.valueName}</option>
+                           </c:forEach>
                         </select>
                     </div>
                     <label class="layui-form-label">证件号码：</label>
@@ -78,7 +71,7 @@
                     <div class="layui-input-inline">
                         <select name="country" lay-verify="">
                             <c:forEach items="${countries}" var="obj">
-                                <option value="${obj.zhName}">${obj.zhName}</option>
+                                <option value="${obj.cname}">${obj.cname}</option>
                             </c:forEach>
                         </select>
                     </div>

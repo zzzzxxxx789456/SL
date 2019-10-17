@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<html>
-<body>
-<h2>Hello World!</h2>
-</body>
-</html>
-=======
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -52,15 +45,19 @@
             © layui.com - 底部固定区域
         </div>
     </div>
-    <script src="${ctx}/layui/layui.js"></script>
-    <script>
-        //JavaScript代码区域
-        layui.use(['element','form','jquery'], function(){
-            var element = layui.element;
-            var form = layui.form;
-            var $ = layui.jquery;
-        });
-    </script>
+        <script src="${ctx}/layui/layui.js"></script>
+        <script>
+            //JavaScript代码区域
+            layui.use(['element','form','jquery'], function(){
+                var element = layui.element;
+                var form = layui.form;
+                var $ = layui.jquery;
+
+                $('#savePwd').click(function () {
+                    alert(12)
+                })
+
+            });
+        </script>
 </body>
 </html>
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c

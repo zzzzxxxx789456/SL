@@ -1,12 +1,13 @@
 package com.qiudaozhang.mapper;
 
 import com.qiudaozhang.model.DataDictionary;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface DataDictionaryMapper {
 
-    List<DataDictionary> findByTypeCode(String card_type);
+    List<DataDictionary> findByTypeCode(@Param("cardType") String cardType);
 
-    String findByTypeCodeValueId(String care_type, int parseInt);
+    String findByTypCodeValueId(@Param("cardType") String cardType, @Param("valueId") Integer valueId);
 }
