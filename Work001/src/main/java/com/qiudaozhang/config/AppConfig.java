@@ -16,9 +16,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * @author 邱道长
+ * @since 2019/8/7
+ * 总配置类
+ */
 @Configuration
-@ComponentScan(basePackages = {"com.qiudaozhang.service"})
+@ComponentScan(basePackages = {"com.qiudaozhang.service","com.qiudaozhang.components"})
 @Import({MybatisConfig.class,SpringMvcConfig.class})// 导入其它的配置类
 @EnableWebMvc
 public class AppConfig implements WebMvcConfigurer {

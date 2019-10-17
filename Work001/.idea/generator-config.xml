@@ -8,7 +8,6 @@
             <Config>
               <option name="comment" value="true" />
               <option name="daoMvnPath" value="src/main/java" />
-<<<<<<< HEAD
               <option name="daoName" value="UserMapper" />
               <option name="daoPackage" value="com.qiudaozhang.mapper" />
               <option name="daoPostfix" value="Mapper" />
@@ -38,36 +37,21 @@
               <option name="comment" value="true" />
               <option name="daoMvnPath" value="src/main/java" />
               <option name="daoName" value="DataDictionaryDao" />
-=======
-              <option name="daoName" value="AuUserDao" />
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
               <option name="daoPackage" value="com.qiudaozhang.mapper" />
               <option name="daoPostfix" value="Dao" />
               <option name="daoTargetFolder" value="$PROJECT_DIR$" />
               <option name="modelMvnPath" value="src/main/java" />
-<<<<<<< HEAD
               <option name="modelName" value="DataDictionary" />
               <option name="modelPackage" value="com.qiudaozhang.model" />
               <option name="modelTargetFolder" value="$PROJECT_DIR$" />
               <option name="mysql_8" value="true" />
               <option name="name" value="data_dictionary" />
-=======
-              <option name="modelName" value="AuUser" />
-              <option name="modelPackage" value="com.qiudaozhang.model" />
-              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
-              <option name="mysql_8" value="true" />
-              <option name="name" value="au_user" />
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
               <option name="needToStringHashcodeEquals" value="true" />
               <option name="offsetLimit" value="true" />
               <option name="overrideXML" value="true" />
               <option name="primaryKey" value="id" />
               <option name="projectFolder" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
               <option name="tableName" value="data_dictionary" />
-=======
-              <option name="tableName" value="au_user" />
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
               <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />
@@ -75,7 +59,6 @@
             </Config>
           </value>
         </entry>
-<<<<<<< HEAD
         <entry key="ds_country">
           <value>
             <Config>
@@ -105,8 +88,6 @@
             </Config>
           </value>
         </entry>
-=======
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
       </map>
     </option>
     <option name="users">

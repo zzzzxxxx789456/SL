@@ -1,11 +1,16 @@
 package com.qiudaozhang.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
  * data_dictionary
  * @author 
  */
+@Setter
+@Getter
 public class DataDictionary implements Serializable {
     /**
      * 主键ID
@@ -74,50 +79,5 @@ public class DataDictionary implements Serializable {
         this.valueName = valueName;
     }
 
-    @Override
-    public boolean equals(Object that) {
-        if (this == that) {
-            return true;
-        }
-        if (that == null) {
-            return false;
-        }
-        if (getClass() != that.getClass()) {
-            return false;
-        }
-        DataDictionary other = (DataDictionary) that;
-        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getTypeCode() == null ? other.getTypeCode() == null : this.getTypeCode().equals(other.getTypeCode()))
-            && (this.getTypeName() == null ? other.getTypeName() == null : this.getTypeName().equals(other.getTypeName()))
-            && (this.getValueId() == null ? other.getValueId() == null : this.getValueId().equals(other.getValueId()))
-            && (this.getValueName() == null ? other.getValueName() == null : this.getValueName().equals(other.getValueName()));
-    }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getTypeCode() == null) ? 0 : getTypeCode().hashCode());
-        result = prime * result + ((getTypeName() == null) ? 0 : getTypeName().hashCode());
-        result = prime * result + ((getValueId() == null) ? 0 : getValueId().hashCode());
-        result = prime * result + ((getValueName() == null) ? 0 : getValueName().hashCode());
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", typeCode=").append(typeCode);
-        sb.append(", typeName=").append(typeName);
-        sb.append(", valueId=").append(valueId);
-        sb.append(", valueName=").append(valueName);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
-    }
 }
