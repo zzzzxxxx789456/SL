@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiudaozhang.mapper.GoodsPackDao">
+  <resultMap id="BaseResultMap" type="com.qiudaozhang.model.GoodsPack">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="goods_pack_name" jdbcType="VARCHAR" property="goodsPackName" />
+    <result column="goods_pack_code" jdbcType="VARCHAR" property="goodsPackCode" />
+    <result column="type_id" jdbcType="INTEGER" property="typeId" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="total_price" jdbcType="DOUBLE" property="totalPrice" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="created_by" jdbcType="VARCHAR" property="createdBy" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.qiudaozhang.model.GoodsPack">
+    <result column="note" jdbcType="LONGVARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, goods_pack_name, goods_pack_code, type_id, type_name, total_price, `state`, num, 
+    created_by, create_time, last_update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    note
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from goods_pack
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="findByGoodsPickNameLike" resultType="com.qiudaozhang.model.GoodsPack">
+    select
+    <include refid="Base_Column_List" />
+    from goods_pack
+    <where>
+      <if test="goodsPackName != null">
+        <bind name="newGoodsPackName" value="'%'+goodsPackName+'%'"/>
+        goods_pack_name like #{newGoodsPackName}
+      </if>
+    </where>
+  </select>
+</mapper>

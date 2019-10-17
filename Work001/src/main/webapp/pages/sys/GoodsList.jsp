@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 15219
-  Date: 2019/10/15
-  Time: 13:57
+  Date: 2019/10/17
+  Time: 13:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>用户管理</title>
+    <title>商品管理</title>
     <link rel="stylesheet" href="${ctx}/layui/css/layui.css">
     <script src="${ctx}/layui/layui.js"></script>
 </head>
@@ -22,17 +22,18 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
-            <a href="${ctx}/sys/u/to/add" class="layui-btn">新增</a>
+            <a href="${ctx}/sys/g/to/add" class="layui-btn">新增</a>
             <form class="layui-form">
                 <div class="layui-form-item" >
                     <div class="layui-input-block">
-                        <input type="text" name="loginCode" required  lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+                        <input type="text" name="goodsName" required  lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input">
                         <input type="button" value="查询" class="layui-btn" id="queryBtn">
                     </div>
                 </div>
             </form>
             <table class="layui-hide" id="demo" lay-filter="test" ></table>
             <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
                 <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
             </script>
@@ -44,7 +45,7 @@
                 </div>
             </script>
             <script type="text/html" id="checkboxTpl">
-                <input type="checkbox" name="isStart" value="{{d.isStart}}" title="启用" lay-filter="lockDemo" {{ d.isStart == 1 ? 'checked' : '' }}>
+                <input type="checkbox" name="state" id="state" value="{{d.state}}" {{ d.state == 1 ? 'checked' : '' }}>
             </script>
         </div>
 
@@ -68,23 +69,27 @@
             function renderTable(){
                 table.render({
                     elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
+                    ,url: '${ctx}/sys/g/list' //数据接口
                     ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
                     ,page: true //开启分页
                     ,cols: [[ //表头
                         {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        // 手机号码中间四位保护
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
-                        ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
+                        ,{field: 'goodsName', title: '商品名称', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'marketPrice', title: '市场价（元）', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'realPrice', title: '优惠价（元）', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'num', title: '库存', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'lastUpdateTime', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
+                        ,{field:'state', title:'状态(上架/下架)', width:150, templet: '#checkboxTpl', unresize: true}
                         ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
                     ]]
                 });
             }
-
+            var state = $("#state").val();
+            if (state == "1") {
+                $("#state").attr("checked",true);
+            } else {
+                $("#state").attr("checked",false);
+            }
 
             //头工具栏事件
             table.on('toolbar(test)', function(obj){
@@ -100,7 +105,7 @@
                             "ids":ids
                         }
                         $.ajax({
-                            url:'${ctx}/sys/u/delGroup',
+                            url:'${ctx}/sys/g/delGroup',
                             type:'post',
                             contentType:'application/json',
                             data:JSON.stringify(data),
@@ -134,7 +139,7 @@
                     layer.confirm('真的删除行么', function(index){
                         // 异步请求删除
                         $.ajax({
-                            url:'${ctx}/u/del/'+data.id,
+                            url:'${ctx}/g/del/'+data.id,
                             type:'post',
                             success:function (data) {
                                 if(data.code == 2000){
@@ -160,23 +165,23 @@
 
             // 添加查询事件
             $('#queryBtn').click(function () {
-                var loginCode = $('input[name=loginCode]').val();
+                var goodsName = $('input[name=goodsName]').val();
                 table.render({
                     elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
+                    ,url: '${ctx}/sys/g/list' //数据接口
                     ,page: true //开启分页
                     ,cols: [[ //表头
                         {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
-                        ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
+                        ,{field: 'goodsName', title: '商品名称', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'marketPrice', title: '市场价（元）', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'realPrice', title: '优惠价（元）', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'num', title: '库存', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'lastUpdateTime', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
+                        ,{field:'state', title:'状态(上架/下架)', width:150, templet: '#checkboxTpl', unresize: true}
                         ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
                     ]],
                     where:{
-                        loginCode:loginCode
+                        goodsName:goodsName
                     }
                 });
             })

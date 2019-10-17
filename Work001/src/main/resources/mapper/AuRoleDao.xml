@@ -12,8 +12,8 @@
   <sql id="Base_Column_List">
     id, role_Code, role_Name, create_Date, is_Start, created_By
   </sql>
-  <select id="findAll" resultType="com.qiudaozhang.model.AuRole">
-    select id, role_Code, role_Name, create_Date, is_Start, created_By
+  <select id="find" resultType="com.qiudaozhang.model.AuRole">
+    select *
     from au_role
   </select>
 </mapper>

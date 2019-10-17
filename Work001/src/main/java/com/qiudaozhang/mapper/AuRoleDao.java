@@ -18,5 +18,5 @@ public interface AuRoleDao {
 
     int updateByPrimaryKey(AuRole record);
 
-    List<AuRole> find(String loginCode);
+    List<AuRole> find();
 }

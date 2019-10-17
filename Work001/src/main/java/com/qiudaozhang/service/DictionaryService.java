@@ -2,9 +2,7 @@ package com.qiudaozhang.service;
 
 import com.qiudaozhang.dto.ResponseCode;
 
-import java.util.List;
-
-public interface RoleService {
+public interface DictionaryService {
 
     ResponseCode find(Integer pageSize, Integer pageNum);
 }

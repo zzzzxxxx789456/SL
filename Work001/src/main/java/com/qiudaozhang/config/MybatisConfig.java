@@ -2,6 +2,7 @@ package com.qiudaozhang.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.pagehelper.PageInterceptor;
+import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
@@ -64,6 +65,8 @@ public class MybatisConfig {
             sqlSessionFactoryBean.setMapperLocations(patternResolver.getResources("classpath:mapper/**/*.xml"));
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            ErrorContext.instance().reset();
         }
         // mybatis 一些系统配置
         org.apache.ibatis.session.Configuration cfg = new org.apache.ibatis.session.Configuration();
