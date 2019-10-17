@@ -17,6 +17,18 @@
                     <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
                     <dd><a href="${ctx}/role/to/list">角色管理</a></dd>
 
+<<<<<<< HEAD
+=======
+=======
+                    <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
+                    <dd><a href="${ctx}/sys/r/to/list">角色管理</a></dd>
+                    <dd><a href="${ctx}">权限管理</a></dd>
+                    <dd><a href="${ctx}">商品管理</a></dd>
+                    <dd><a href="${ctx}">商品套餐管理</a></dd>
+                    <dd><a href="${ctx}">基础数据</a></dd>
+                    <dd><a href="${ctx}">数据字典</a></dd>
+>>>>>>> 24a242b904e43e687c4754367365e7f319f72894
+>>>>>>> d8845d41c6bee535fd8247fe5e63c15bfd66d861
                 </dl>
             </li>
             <li class="layui-nav-item">

@@ -1,31 +1,28 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: 15219
+  Date: 2019/10/16
+  Time: 14:45
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>用户管理</title>
+    <title>角色管理</title>
     <link rel="stylesheet" href="${ctx}/layui/css/layui.css">
     <script src="${ctx}/layui/layui.js"></script>
 </head>
 <body class="layui-layout-body">
+
 <div class="layui-layout layui-layout-admin">
     <jsp:include page="/pages/fragment/header.jsp"></jsp:include>
     <jsp:include page="/pages/fragment/left-nav.jsp"></jsp:include>
-
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
-            <a href="${ctx}/sys/u/to/add" class="layui-btn">新增</a>
-            <form class="layui-form">
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <input type="text" name="loginCode" required  lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input">
-                        <input type="button" value="查询" class="layui-btn" id="queryBtn">
-                    </div>
-                </div>
-            </form>
+            <a href="${ctx}/sys/r/to/add" class="layui-btn">新增</a>
             <table class="layui-hide" id="demo" lay-filter="test" ></table>
             <script type="text/html" id="barDemo">
                 <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
@@ -63,24 +60,19 @@
             function renderTable(){
                 table.render({
                     elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
+                    ,url: '${ctx}/sys/r/list' //数据接口
                     ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
                     ,page: true //开启分页
                     ,cols: [[ //表头
                         {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        // 手机号码中间四位保护
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
+                        ,{field: 'roleCode', title: '角色编号', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'roleName', title: '角色名称', width:180, sort: true, fixed: 'left'}
+                        ,{field: 'createdBy', title: '创建者', width:180, sort: true, fixed: 'left'}
                         ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
                         ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
                     ]]
                 });
             }
-
-
             //头工具栏事件
             table.on('toolbar(test)', function(obj){
                 var checkStatus = table.checkStatus(obj.config.id);
@@ -95,7 +87,7 @@
                             "ids":ids
                         }
                         $.ajax({
-                            url:'${ctx}/sys/u/delGroup',
+                            url:'${ctx}/sys/r/delGroup',
                             type:'post',
                             contentType:'application/json',
                             data:JSON.stringify(data),
@@ -129,7 +121,7 @@
                     layer.confirm('真的删除行么', function(index){
                         // 异步请求删除
                         $.ajax({
-                            url:'${ctx}/u/del/'+data.id,
+                            url:'${ctx}/r/del/'+data.id,
                             type:'post',
                             success:function (data) {
                                 if(data.code == 2000){
@@ -151,30 +143,6 @@
 
                 }
             });
-
-
-            // 添加查询事件
-            $('#queryBtn').click(function () {
-                var loginCode = $('input[name=loginCode]').val();
-                table.render({
-                    elem: '#demo'
-                    ,url: '${ctx}/sys/u/list' //数据接口
-                    ,page: true //开启分页
-                    ,cols: [[ //表头
-                        {type: 'checkbox', fixed: 'left'}
-                        ,{field: 'loginCode', title: '用户名', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
-                        ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        // 手机号码中间四位保护
-                        ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
-                        ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
-                    ]],
-                    where:{
-                        loginCode:loginCode
-                    }
-                });
-            })
         });
     </script>
 </body>
