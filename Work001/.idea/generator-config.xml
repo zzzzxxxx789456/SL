@@ -37,11 +37,7 @@
             <Config>
               <option name="comment" value="true" />
               <option name="daoMvnPath" value="src/main/java" />
-<<<<<<< HEAD
               <option name="daoName" value="AuUserDao" />
-=======
-              <option name="daoName" value="UserMapper" />
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
               <option name="daoPackage" value="com.qiudaozhang.mapper" />
               <option name="daoPostfix" value="Dao" />
               <option name="daoTargetFolder" value="$PROJECT_DIR$" />
@@ -93,6 +89,35 @@
             </Config>
           </value>
         </entry>
+        <entry key="country">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CountryDao" />
+              <option name="daoPackage" value="com.qiudaozhang.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="jsr310Support" value="true" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Country" />
+              <option name="modelPackage" value="com.qiudaozhang.model" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="mysql_8" value="true" />
+              <option name="name" value="country" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="country" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
         <entry key="data_dictionary">
           <value>
             <Config>
@@ -109,7 +134,6 @@
               <option name="modelTargetFolder" value="$PROJECT_DIR$" />
               <option name="mysql_8" value="true" />
               <option name="name" value="data_dictionary" />
-<<<<<<< HEAD
               <option name="needToStringHashcodeEquals" value="true" />
               <option name="offsetLimit" value="true" />
               <option name="overrideXML" value="true" />
@@ -139,18 +163,12 @@
               <option name="modelTargetFolder" value="$PROJECT_DIR$" />
               <option name="mysql_8" value="true" />
               <option name="name" value="goods_info" />
-=======
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
               <option name="needToStringHashcodeEquals" value="true" />
               <option name="offsetLimit" value="true" />
               <option name="overrideXML" value="true" />
               <option name="primaryKey" value="id" />
               <option name="projectFolder" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
               <option name="tableName" value="goods_info" />
-=======
-              <option name="tableName" value="data_dictionary" />
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
               <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />
@@ -158,11 +176,7 @@
             </Config>
           </value>
         </entry>
-<<<<<<< HEAD
         <entry key="goods_pack">
-=======
-        <entry key="ds_country">
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
           <value>
             <Config>
               <option name="comment" value="true" />

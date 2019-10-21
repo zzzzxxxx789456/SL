@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
     <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="db2fe350-3542-4efe-95c3-16d3db228eee">
-=======
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="c46d168c-f207-4e4f-a135-e1c548ed0e78">
-=======
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="db2fe350-3542-4efe-95c3-16d3db228eee">
-=======
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="c46d168c-f207-4e4f-a135-e1c548ed0e78">
-=======
-    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="421338f6-9165-4d4c-be20-0e5a8b8b0b2a">
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
->>>>>>> 674f0561d7d072a8d64d065498ded61dbba80b71
->>>>>>> d8845d41c6bee535fd8247fe5e63c15bfd66d861
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

@@ -28,4 +28,9 @@ public class DictionaryServiceImpl implements DictionaryService {
         code.setCode(0);
         return code;
     }
+
+    @Override
+    public List<DataDictionary> findByTypeCode(String user_type) {
+        return dataDictionaryDao.findByTypeCode(user_type);
+    }
 }

@@ -12,20 +12,19 @@
   <sql id="Base_Column_List">
     ID, `NAME`, CODE, `VALUE`, DESCRIPTION, DR
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from basics_parameter
-    where ID = #{id,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from basics_parameter
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.qiudaozhang.model.BasicsParameter" useGeneratedKeys="true">
-    insert into basics_parameter (`NAME`, CODE, `VALUE`, 
+    insert into basics_parameter (`NAME`, CODE, `VALUE`,
       DESCRIPTION, DR)
-    values (#{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
+    values (#{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR},
       #{description,jdbcType=VARCHAR}, #{dr,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="com.qiudaozhang.model.BasicsParameter" useGeneratedKeys="true">

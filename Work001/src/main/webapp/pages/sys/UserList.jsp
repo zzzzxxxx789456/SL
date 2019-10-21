@@ -1,6 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: 15219
+  Date: 2019/10/15
+  Time: 13:57
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -10,16 +15,16 @@
     <script src="${ctx}/layui/layui.js"></script>
 </head>
 <body class="layui-layout-body">
+
 <div class="layui-layout layui-layout-admin">
     <jsp:include page="/pages/fragment/header.jsp"></jsp:include>
     <jsp:include page="/pages/fragment/left-nav.jsp"></jsp:include>
-
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
             <a href="${ctx}/sys/u/to/add" class="layui-btn">新增</a>
             <form class="layui-form">
-                <div class="layui-form-item">
+                <div class="layui-form-item" >
                     <div class="layui-input-block">
                         <input type="text" name="loginCode" required  lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input">
                         <input type="button" value="查询" class="layui-btn" id="queryBtn">
@@ -129,7 +134,7 @@
                     layer.confirm('真的删除行么', function(index){
                         // 异步请求删除
                         $.ajax({
-                            url:'${ctx}/u/del/'+data.id,
+                            url:'${ctx}sys/u/del/'+data.id,
                             type:'post',
                             success:function (data) {
                                 if(data.code == 2000){

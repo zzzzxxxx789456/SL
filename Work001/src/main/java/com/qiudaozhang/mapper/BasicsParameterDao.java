@@ -2,6 +2,8 @@ package com.qiudaozhang.mapper;
 
 import com.qiudaozhang.model.BasicsParameter;
 
+import java.util.List;
+
 public interface BasicsParameterDao {
     int deleteByPrimaryKey(String id);
 
@@ -14,4 +16,6 @@ public interface BasicsParameterDao {
     int updateByPrimaryKeySelective(BasicsParameter record);
 
     int updateByPrimaryKey(BasicsParameter record);
+
+    List<BasicsParameter> find();
 }

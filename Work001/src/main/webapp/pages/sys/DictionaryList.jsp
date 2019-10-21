@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="${ctx}/layui/css/layui.css">
     <script src="${ctx}/layui/layui.js"></script>
 </head>
-<body>
 <body class="layui-layout-body">
 
 <div class="layui-layout layui-layout-admin">
@@ -143,6 +142,5 @@
             });
         });
     </script>
-</body>
 </body>
 </html>

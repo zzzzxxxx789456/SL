@@ -16,4 +16,7 @@
     select *
     from au_role
   </select>
+  <select id="findById" resultType="java.lang.String">
+      select role_Name from au_role where id = #{roleId}
+  </select>
 </mapper>

@@ -1,8 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qiudaozhang.mapper.CountryDao">
-  <select id="findAll" resultType="com.qiudaozhang.model.Country">
-    select  id, continent_id, name, lower_name, country_code, full_name, cname, full_cname, remark, continent
+  <resultMap id="BaseResultMap" type="com.qiudaozhang.model.Country">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="continent_id" jdbcType="INTEGER" property="continentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="lower_name" jdbcType="VARCHAR" property="lowerName" />
+    <result column="country_code" jdbcType="VARCHAR" property="countryCode" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="cname" jdbcType="VARCHAR" property="cname" />
+    <result column="full_cname" jdbcType="VARCHAR" property="fullCname" />
+    <result column="continent" jdbcType="VARCHAR" property="continent" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.qiudaozhang.model.Country">
+    <result column="remark" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, continent_id, `name`, lower_name, country_code, full_name, cname, full_cname, 
+    continent
+  </sql>
+  <sql id="Blob_Column_List">
+    remark
+  </sql>
+  <select id="findAll" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from country
   </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from country
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qiudaozhang.model.Country" useGeneratedKeys="true">
+    insert into country (continent_id, `name`, lower_name, 
+      country_code, full_name, cname, 
+      full_cname, continent, remark
+      )
+    values (#{continentId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{lowerName,jdbcType=VARCHAR}, 
+      #{countryCode,jdbcType=VARCHAR}, #{fullName,jdbcType=VARCHAR}, #{cname,jdbcType=VARCHAR}, 
+      #{fullCname,jdbcType=VARCHAR}, #{continent,jdbcType=VARCHAR}, #{remark,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qiudaozhang.model.Country" useGeneratedKeys="true">
+    insert into country
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="continentId != null">
+        continent_id,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="lowerName != null">
+        lower_name,
+      </if>
+      <if test="countryCode != null">
+        country_code,
+      </if>
+      <if test="fullName != null">
+        full_name,
+      </if>
+      <if test="cname != null">
+        cname,
+      </if>
+      <if test="fullCname != null">
+        full_cname,
+      </if>
+      <if test="continent != null">
+        continent,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="continentId != null">
+        #{continentId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="lowerName != null">
+        #{lowerName,jdbcType=VARCHAR},
+      </if>
+      <if test="countryCode != null">
+        #{countryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="fullName != null">
+        #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="cname != null">
+        #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="fullCname != null">
+        #{fullCname,jdbcType=VARCHAR},
+      </if>
+      <if test="continent != null">
+        #{continent,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qiudaozhang.model.Country">
+    update country
+    <set>
+      <if test="continentId != null">
+        continent_id = #{continentId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="lowerName != null">
+        lower_name = #{lowerName,jdbcType=VARCHAR},
+      </if>
+      <if test="countryCode != null">
+        country_code = #{countryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="fullName != null">
+        full_name = #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="cname != null">
+        cname = #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="fullCname != null">
+        full_cname = #{fullCname,jdbcType=VARCHAR},
+      </if>
+      <if test="continent != null">
+        continent = #{continent,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.qiudaozhang.model.Country">
+    update country
+    set continent_id = #{continentId,jdbcType=INTEGER},
+      `name` = #{name,jdbcType=VARCHAR},
+      lower_name = #{lowerName,jdbcType=VARCHAR},
+      country_code = #{countryCode,jdbcType=VARCHAR},
+      full_name = #{fullName,jdbcType=VARCHAR},
+      cname = #{cname,jdbcType=VARCHAR},
+      full_cname = #{fullCname,jdbcType=VARCHAR},
+      continent = #{continent,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qiudaozhang.model.Country">
+    update country
+    set continent_id = #{continentId,jdbcType=INTEGER},
+      `name` = #{name,jdbcType=VARCHAR},
+      lower_name = #{lowerName,jdbcType=VARCHAR},
+      country_code = #{countryCode,jdbcType=VARCHAR},
+      full_name = #{fullName,jdbcType=VARCHAR},
+      cname = #{cname,jdbcType=VARCHAR},
+      full_cname = #{fullCname,jdbcType=VARCHAR},
+      continent = #{continent,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>

@@ -10,10 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import java.util.Properties;
 
-/**
- * @author 邱道长
- * @since 2019/8/7
- */
+
 @Configuration
 @ComponentScan(basePackages = {"com.qiudaozhang.controller"})
 public class SpringMvcConfig {
