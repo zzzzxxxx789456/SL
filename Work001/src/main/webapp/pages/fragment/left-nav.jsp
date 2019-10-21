@@ -14,47 +14,18 @@
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">系统管理</a>
                 <dl class="layui-nav-child">
-<<<<<<< HEAD
-                    <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
-                    <dd><a href="${ctx}/sys/r/to/list">角色管理</a></dd>
-                    <dd><a href="${ctx}">权限管理</a></dd>
-                    <dd><a href="${ctx}/sys/g/to/list">商品管理</a></dd>
-                    <dd><a href="${ctx}/sys/gp/to/list">商品套餐管理</a></dd>
-                    <dd><a href="${ctx}/sys/bp/to/list">基础数据</a></dd>
-                    <dd><a href="${ctx}/sys/dd/to/list">数据字典</a></dd>
-=======
                     <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
                     <dd><a href="${ctx}/role/to/list">角色管理</a></dd>
 
-<<<<<<< HEAD
-=======
-=======
-                    <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
-                    <dd><a href="${ctx}/sys/r/to/list">角色管理</a></dd>
-                    <dd><a href="${ctx}">权限管理</a></dd>
-                    <dd><a href="${ctx}">商品管理</a></dd>
-                    <dd><a href="${ctx}">商品套餐管理</a></dd>
-                    <dd><a href="${ctx}">基础数据</a></dd>
-                    <dd><a href="${ctx}">数据字典</a></dd>
->>>>>>> 24a242b904e43e687c4754367365e7f319f72894
->>>>>>> d8845d41c6bee535fd8247fe5e63c15bfd66d861
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">会员管理</a>
                 <dl class="layui-nav-child">
-<<<<<<< HEAD
-                    <dd><a href="${ctx}">注册新会员</a></dd>
-                    <dd><a href="${ctx}">新会员管理</a></dd>
-                    <dd><a href="${ctx}">修改本人资料</a></dd>
-                    <dd><a href="${ctx}">修改本人密码</a></dd>
-=======
                     <dd><a href="${ctx}/u/to/register">注册新会员</a></dd>
                     <dd><a href="${ctx}/u/to/list">新会员管理</a></dd>
                     <dd><a href="${ctx}/u/to/modify">修改本人资料</a></dd>
                     <dd><a href="${ctx}/u/to/modify/pwd">修改本人密码</a></dd>
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
                 </dl>
             </li>
             <li class="layui-nav-item">

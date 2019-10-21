@@ -76,7 +76,7 @@ public class UserController {
         user.setIdCardPicNegPath(idCardPicNegPathFile.getOriginalFilename());
         user.setBankPicPath(bankPicPathFile.getOriginalFilename());
         userService.save(user);
-        return "u/register";
+        return "u/login";
     }
 
     @RequestMapping("to/modify/pwd")
@@ -136,7 +136,7 @@ public class UserController {
         User queryUser = userService.findByLoginCode(user.getLoginCode());
         if(queryUser == null){
             // 用户不存在
-            return "redirect:u/login";
+            return "redirect:login";
         } else if(queryUser.getPassword().equals(user.getPassword())) {
             // 成功
             queryUser.setPassword(null);
@@ -146,9 +146,8 @@ public class UserController {
             return "u/main";
         } else {
             // 密码错误
-            return "redirect:u/login";
         }
-
+        return "redirect:login";
     }
 
 

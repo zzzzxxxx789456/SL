@@ -3,24 +3,14 @@ package com.qiudaozhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
-<<<<<<< HEAD
-import com.qiudaozhang.mapper.AuUserDao;
-import com.qiudaozhang.model.AuUser;
-=======
 import com.qiudaozhang.dto.UserDto;
 import com.qiudaozhang.mapper.DataDictionaryMapper;
-import com.qiudaozhang.mapper.RoleMapper;
 import com.qiudaozhang.mapper.UserDao;
-import com.qiudaozhang.model.DataDictionary;
 import com.qiudaozhang.model.User;
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
 import com.qiudaozhang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-import java.util.List;
-=======
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -36,10 +26,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private DataDictionaryMapper dataDictionaryMapper;
-
-    @Autowired
-    private RoleMapper roleMapper;
-
     @Override
     public void save(User user) {
         // 查询得到卡名称
@@ -57,7 +43,6 @@ public class UserServiceImpl implements UserService {
         }
         // 记录日志
         System.out.println("当前用户无推荐人，注册失败");
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
 
     }
 
@@ -129,8 +114,6 @@ public class UserServiceImpl implements UserService {
         code.setCode(0);
 
         return code;
-<<<<<<< HEAD
-=======
     }
 
     @Override
@@ -168,40 +151,9 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    @Override
-    public void add(User user) {
-        // todo
-        // 处理得到角色ID和角色名称
-        //
-        String roleName = roleMapper.findById(user.getRoleId());
-        user.setRoleName(roleName);
-        if(user.getRoleId() != 1){
-            // 处理会员类型
-            String userTypeName = dataDictionaryMapper.findByTypCodeValueId("USER_TYPE", Integer.parseInt(user.getUserType()));
-            user.setUserTypeName(userTypeName);
-        } else {
-            user.setUserType(null);
-            user.setUserTypeName(null);
-        }
-
-        // 处理证件
-        String cardTypeName = dataDictionaryMapper.findByTypCodeValueId("CARD_TYPE", Integer.parseInt(user.getCardType()));
-        user.setCardTypeName(cardTypeName);
-        // 处理推荐人
-        user.setReferId(user.getRecommender().getId());
-        user.setReferCode(user.getRecommender().getLoginCode());
-        // 处理创建日期
-        user.setCreateTime(LocalDateTime.now());
-        user.setPassword("123456");
-        user.setPassword2("123456");
-        userDao.insert(user);
-
-
-    }
 
     @Override
     public void updateLoginTime(Long id, LocalDateTime now) {
         userDao.updateLoginTime(id,now);
->>>>>>> eeb22ab88d9feca0ab5a362543275ef7195efc8c
     }
 }
