@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiudaozhang.mapper.AuRoleDao">
+  <resultMap id="BaseResultMap" type="com.qiudaozhang.model.AuRole">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="role_Code" jdbcType="VARCHAR" property="roleCode" />
+    <result column="role_Name" jdbcType="VARCHAR" property="roleName" />
+    <result column="create_Date" jdbcType="DATE" property="createDate" />
+    <result column="is_Start" jdbcType="INTEGER" property="isStart" />
+    <result column="created_By" jdbcType="VARCHAR" property="createdBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, role_Code, role_Name, create_Date, is_Start, created_By
+  </sql>
+  <select id="find" resultType="com.qiudaozhang.model.AuRole">
+    select *
+    from au_role
+  </select>
+  <select id="findById" resultType="java.lang.String">
+      select role_Name from au_role where id = #{roleId}
+  </select>
+</mapper>

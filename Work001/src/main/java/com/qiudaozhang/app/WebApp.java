@@ -9,10 +9,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-/**
- * @author 邱道长
- * @since 2019/8/7
- */
 public class WebApp extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 

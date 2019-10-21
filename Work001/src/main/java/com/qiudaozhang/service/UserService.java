@@ -1,12 +1,15 @@
 package com.qiudaozhang.service;
 
-import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.dto.UserDto;
-import com.qiudaozhang.model.User;
+<<<<<<< HEAD
+=======
 
-import java.time.LocalDateTime;
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+import com.qiudaozhang.dto.ResponseCode;
+import com.qiudaozhang.model.AuUser;
+
 import java.util.List;
 
+<<<<<<< HEAD
 /**
  * @author 深圳邱道长
  * @since 2019/10/7
@@ -25,10 +28,18 @@ public interface UserService {
     ResponseCode modify(User user);
 
     ResponseCode find(Integer pageSize, Integer pageNum);
+=======
+public interface UserService {
+    ResponseCode find(Integer pageSize, Integer pageNum, String loginCode);
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
 
-    ResponseCode delById(Long id);
+    void add(AuUser user);
 
     ResponseCode delGroup(List<Integer> ids);
 
+<<<<<<< HEAD
     void updateLoginTime(Long id, LocalDateTime now);
+=======
+    ResponseCode delById(Long id);
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
 }
