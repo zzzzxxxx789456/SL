@@ -3,10 +3,24 @@ package com.qiudaozhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
+<<<<<<< HEAD
 import com.qiudaozhang.mapper.RoleDao;
 import com.qiudaozhang.mapper.UserDao;
 import com.qiudaozhang.mapper.DataDictionaryDao;
 import com.qiudaozhang.model.User;
+=======
+<<<<<<< HEAD
+import com.qiudaozhang.dto.UserDto;
+import com.qiudaozhang.mapper.DataDictionaryMapper;
+import com.qiudaozhang.mapper.UserDao;
+import com.qiudaozhang.model.User;
+=======
+import com.qiudaozhang.mapper.AuRoleDao;
+import com.qiudaozhang.mapper.AuUserDao;
+import com.qiudaozhang.mapper.DataDictionaryDao;
+import com.qiudaozhang.model.AuUser;
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
 import com.qiudaozhang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +35,37 @@ public class UserServiceImpl  implements UserService {
     private UserDao userDao;
 
     @Autowired
+<<<<<<< HEAD
+    private DataDictionaryMapper dataDictionaryMapper;
+    @Override
+    public void save(User user) {
+        // 查询得到卡名称
+        String cardTypeName = dataDictionaryMapper.findByTypCodeValueId("CARD_TYPE", Integer.parseInt(user.getCardType()));
+        user.setCardTypeName(cardTypeName);
+        // 查找推荐人是否合法
+        User recommender = userDao.findByUserName(user.getRecommender().getUserName());
+        if (recommender != null) {
+            user.setPassword("123456");
+            user.setPassword2("123456");
+            user.setReferId(recommender.getId());
+            user.setReferCode(recommender.getLoginCode());
+            user.setCreateTime(LocalDateTime.now());
+            userDao.insert(user);
+        }
+        // 记录日志
+        System.out.println("当前用户无推荐人，注册失败");
+
+    }
+=======
     private DataDictionaryDao dataDictionaryMapper;
 
     @Autowired
+<<<<<<< HEAD
     private RoleDao roleMapper;
+=======
+    private AuRoleDao roleMapper;
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
 
     @Override
     public ResponseCode find(Integer pageSize, Integer pageNum, String loginCode) {
@@ -39,7 +80,29 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
+<<<<<<< HEAD
     public void add(User user) {
+=======
+<<<<<<< HEAD
+    public ResponseCode delById(Long id) {
+        ResponseCode code = new ResponseCode();
+        if (id == null) {
+            code.setCode(ResponseCode.FAIL);
+            code.setMsg("非法ID");
+            return code;
+        }
+        int row = userDao.delById(id);
+        if (row == 1) {
+            code.setCode(ResponseCode.SUCCESS);
+            code.setMsg("删除成功");
+        } else {
+            code.setCode(ResponseCode.FAIL);
+            code.setMsg("未知ID");
+        }
+        return code;
+=======
+    public void add(AuUser user) {
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
         // todo
         // 处理得到角色ID和角色名称
         //
@@ -65,6 +128,7 @@ public class UserServiceImpl  implements UserService {
         user.setPassword("123456");
         user.setPassword2("123456");
         userDao.insert(user);
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
 
     }
 
@@ -80,6 +144,15 @@ public class UserServiceImpl  implements UserService {
             code.setMsg("批量删除失败");
         }
         return code;
+<<<<<<< HEAD
+
+    }
+
+
+    @Override
+    public void updateLoginTime(Long id, LocalDateTime now) {
+        userDao.updateLoginTime(id,now);
+=======
     }
 
     @Override
@@ -99,6 +172,7 @@ public class UserServiceImpl  implements UserService {
             code.setMsg("未知ID");
         }
         return code;
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
     }
 
     @Override

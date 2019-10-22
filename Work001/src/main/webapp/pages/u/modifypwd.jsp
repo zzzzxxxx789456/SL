@@ -45,19 +45,19 @@
             </form>
             <form class="layui-form" action="">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">旧密码</label>
+                    <label class="layui-form-label">二级旧密码</label>
                     <div class="layui-input-block">
                         <input type="password" name="oldPwd2" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">新密码</label>
+                    <label class="layui-form-label">新二级密码</label>
                     <div class="layui-input-block">
                         <input type="password" name="newPwd2" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">确认新密码</label>
+                    <label class="layui-form-label">确认二级新密码</label>
                     <div class="layui-input-block">
                         <input type="password" name="newConfirmPwd2" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
                     </div>

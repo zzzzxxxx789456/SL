@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="426b52c3-d358-4352-bb37-7aa6ffb770e7" name="Default Changelist" comment="" />
+    <list default="true" id="ef52a4f5-2895-4d68-a58f-0e607e6cf3f9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +47,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/SysController.java">
+=======
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+            <state relative-caret-position="142">
+              <caret line="199" column="42" selection-start-line="199" selection-start-column="42" selection-end-line="199" selection-end-column="42" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/SysController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,12 +70,147 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="60" column="55" lean-forward="true" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="108" column="53" lean-forward="true" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="53" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/AuUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="188" column="1" lean-forward="true" selection-start-line="188" selection-start-column="1" selection-end-line="188" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CountryDao.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5377">
+              <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/AuRoleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AuRoleDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/components/FileConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/AuUserDao.java">
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+=======
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-912" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AuUserDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="324" column="16" selection-start-line="324" selection-start-column="16" selection-end-line="324" selection-end-column="16" />
+              <folding>
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#sql#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#1;n#mapper#0;n#!!top" />
+                <element signature="n#update#2;n#mapper#0;n#!!top" />
+                <element signature="n#update#3;n#mapper#0;n#!!top" />
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#delete#1;n#mapper#0;n#!!top" />
+                <element signature="n#foreach#0;n#where#0;n#delete#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+              </folding>
+            </state>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="Jsp File" />
+<<<<<<< HEAD
+=======
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
         <option value="Interface" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -72,6 +218,56 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+      <find>u</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/AuUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/DataDictionaryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/DataDictionaryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/CountryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/CountryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappper/CountryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/CountryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/file.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CountryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/DataDictionary.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/app/WebApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/components/FileConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/fragment/left-nav.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/DataDictionaryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DataDictionaryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/dto/ResponseCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/sys/useradd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/sys/userlist.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/modify.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/modifypwd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/u/modifypwd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/u/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/mapper.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/u/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/UserServiceImpl.java" />
+=======
       <find>javascript:;</find>
       <find>limit</find>
       <find>barDemo</find>
@@ -102,6 +298,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/AuUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/AuRoleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/AuRoleDao.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/DictionaryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/UserService.java" />
@@ -138,6 +335,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/GoodsInfoDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DataDictionaryDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BasicsParameterDao.xml" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       </list>
     </option>
   </component>
@@ -151,10 +351,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="mavenHome" value="C:/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="C:\apache-maven-3.5.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+<<<<<<< HEAD
+=======
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -165,6 +367,7 @@
         <option value="jdk-1.8" />
       </list>
     </option>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -176,15 +379,30 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="Work001 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+<<<<<<< HEAD
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Work001 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
+=======
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
         </path>
       </expand>
       <select />
     </treeState>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="175" />
+=======
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="176" />
     <option name="y" value="1" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -193,7 +411,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,19 +426,292 @@
               <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
               <item name="Work001" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="qiudaozhang" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="layer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="layer" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Work001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Work001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="u" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+            </path>
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
+<<<<<<< HEAD
+=======
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+      <pane id="PackagesPane" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571735237773" />
     <property name="last_opened_file_path" value="D:/Y2笔记/项目/5/SL" />
+=======
+<<<<<<< HEAD
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571649043828" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="C:/SL/SL/Work001" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.qiudaozhang.mapper" />
+      <recent name="com.qiudaozhang.service.impl" />
+      <recent name="com.qiudaozhang.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\webapp" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\webapp\pages\user" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\webapp\pages" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\java\com\qiudaozhang\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qiudaozhang.model" />
+      <recent name="com.qiudaozhang.components" />
+      <recent name="com.qiudaozhang.util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\resources\mapper" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\webapp\pages\fragment" />
+      <recent name="C:\Users\61048\Desktop\Y2\Work001\src\main\webapp\pages" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571648637790" />
+    <property name="last_opened_file_path" value="D:/www/SL/SL" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -228,6 +726,14 @@
       <recent name="D:\Y2学习\struts\Work001\src\main\webapp" />
       <recent name="D:\Y2学习\struts\Work001\src\main\java\com\qiudaozhang" />
       <recent name="D:\Y2学习\struts\Work001\src\main\resources" />
+<<<<<<< HEAD
+=======
+      <recent name="D:\Y2学习\struts\Work001\src\main\java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.qiudaozhang.service" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
     </key>
   </component>
   <component name="RunDashboard">
@@ -243,14 +749,22 @@
     </option>
   </component>
   <component name="RunManager">
+<<<<<<< HEAD
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+=======
     <configuration name="Tomcat 8.5.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="Work001:war exploded">
           <settings>
+<<<<<<< HEAD
+            <option name="CONTEXT_PATH" value="/Work001" />
+=======
             <option name="CONTEXT_PATH" value="/SL" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
           </settings>
         </artifact>
       </deployment>
@@ -263,7 +777,11 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
+<<<<<<< HEAD
+        <option name="DEBUG_PORT" value="16965" />
+=======
         <option name="DEBUG_PORT" value="61735" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -323,10 +841,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="426b52c3-d358-4352-bb37-7aa6ffb770e7" name="Default Changelist" comment="" />
-      <created>1569825855341</created>
+      <changelist id="ef52a4f5-2895-4d68-a58f-0e607e6cf3f9" name="Default Changelist" comment="" />
+      <created>1571039199449</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1571039199449</updated>
+      <workItem from="1571039202139" duration="2458000" />
+      <workItem from="1571105230482" duration="1547000" />
+      <workItem from="1571106861699" duration="16894000" />
+      <workItem from="1571130625284" duration="214000" />
+      <workItem from="1571130945744" duration="24000" />
+      <workItem from="1571203038251" duration="10254000" />
+      <workItem from="1571217697805" duration="8000" />
+      <workItem from="1571290022088" duration="5092000" />
+      <workItem from="1571620487715" duration="14625000" />
+=======
       <updated>1569825855341</updated>
       <workItem from="1569825861004" duration="1706000" />
       <workItem from="1570413256895" duration="3820000" />
@@ -342,18 +872,41 @@
       <workItem from="1571214792538" duration="1342000" />
       <workItem from="1571277800483" duration="14784000" />
       <workItem from="1571626104605" duration="3655000" />
+<<<<<<< HEAD
       <workItem from="1571638841763" duration="9252000" />
       <workItem from="1571711614294" duration="13830000" />
+=======
+      <workItem from="1571638841763" duration="8594000" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="92044000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="51116000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25201073" />
+=======
+    <option name="totallyTimeSpent" value="77556000" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -362,51 +915,41 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.07920792" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+=======
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31419286" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32531825" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Application Servers" order="15" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32956153" />
+      <window_info anchor="bottom" id="Application Servers" order="16" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.32995737" />
+=======
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.23454158" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19936034" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+=======
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -419,13 +962,51 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.23454158" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/modifypwd.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/register.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/main.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/DataDictionaryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/CountryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+=======
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -491,15 +1072,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/CountryDao.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="513">
           <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+=======
+        <state relative-caret-position="1171">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="23" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/Country.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="390">
           <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+=======
+<<<<<<< HEAD
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/app/WebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12939">
+          <caret line="796" selection-start-line="796" selection-end-line="796" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16682">
+          <caret line="944" selection-start-line="944" selection-end-line="944" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="888" column="75" selection-start-line="888" selection-start-column="75" selection-end-line="888" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/SysUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-618">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/sys/useradd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.2/mybatis-3.5.2-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+=======
+        <state relative-caret-position="148">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
         </state>
       </provider>
     </entry>
@@ -547,14 +1202,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="550">
           <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+=======
+        <state relative-caret-position="189">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2993#2994#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -563,6 +1225,80 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/listener/MyAppListener.java">
+=======
+<<<<<<< HEAD
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.2/mybatis-spring-2.0.2-sources.jar!/org/mybatis/spring/SqlSessionTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="367" selection-start-line="367" selection-end-line="367" />
+          <folding>
+            <element signature="e#10929#10930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.2/mybatis-3.5.2-sources.jar!/org/apache/ibatis/binding/MapperMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/modify.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2223">
+          <caret line="159" column="7" lean-forward="true" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/DataDictionaryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataDictionaryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/modifypwd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/role/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/role/add.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/GoodsService.java">
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -640,15 +1376,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="297">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+=======
+        <state relative-caret-position="465">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/GoodsPackService.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="24" column="85" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/config/MybatisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/mapper.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/config/SpringMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/CountryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/BasicsParameterDao.java">
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
@@ -786,15 +1566,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="229">
           <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+=======
+        <state relative-caret-position="243">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/UserDao.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/DataDictionaryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.2/mybatis-3.5.2-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/DictionaryServiceImpl.java">
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
@@ -824,13 +1634,75 @@
             <element signature="n#select#2;n#mapper#0;n#!!top" />
             <element signature="n#select#3;n#mapper#0;n#!!top" />
           </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RoleDao.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="445">
           <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="124">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/method/HandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+          <folding>
+            <element signature="e#8190#8191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10-sources.jar!/com/github/pagehelper/page/PageMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3211">
+          <caret line="174" column="12" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10-sources.jar!/com/github/pagehelper/PageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+=======
+        <state relative-caret-position="594">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           <folding>
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
@@ -840,6 +1712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsPackDao.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="391">
           <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding>
@@ -848,11 +1721,29 @@
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
             <element signature="n#foreach#0;n#where#0;n#delete#1;n#mapper#0;n#!!top" />
+=======
+        <state relative-caret-position="297">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+          <folding>
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsInfoDao.xml">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/dto/ResponseCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/mapper/AuRoleDao.java">
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
@@ -864,13 +1755,59 @@
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
             <element signature="n#foreach#0;n#where#0;n#delete#1;n#mapper#0;n#!!top" />
           </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BasicsParameterDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="143">
+          <caret line="108" column="53" lean-forward="true" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="53" />
+=======
+        <state relative-caret-position="312">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CountryDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="5377">
+          <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/components/FileConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/u/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiudaozhang/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="199" column="42" selection-start-line="199" selection-start-column="42" selection-end-line="199" selection-end-column="42" />
+=======
+        <state relative-caret-position="54">
+          <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
           <folding>
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
@@ -906,6 +1843,7 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+>>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
         </state>
       </provider>
     </entry>

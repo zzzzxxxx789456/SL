@@ -53,10 +53,6 @@
                 var form = layui.form;
                 var $ = layui.jquery;
 
-                $('#savePwd').click(function () {
-                    alert(12)
-                })
-
             });
         </script>
 </body>

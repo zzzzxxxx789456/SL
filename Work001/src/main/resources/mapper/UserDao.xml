@@ -320,6 +320,7 @@
          id_Card_Pic_neg_Path, id_Card_Pic_pos_Path, bank_Pic_Path
         from au_user
     </select>
+<<<<<<< HEAD
   <select id="findByLoginCodeLike" resultType="com.qiudaozhang.model.User">
     select *
     from au_user
@@ -330,4 +331,10 @@
       </if>
     </where>
   </select>
+=======
+    <select id="findByLoginCodeLike" resultType="com.qiudaozhang.model.User">
+        select *
+        from au_user
+    </select>
+>>>>>>> 12b5e25d11705053545180a7c98b50a8fc7a232b
 </mapper>
