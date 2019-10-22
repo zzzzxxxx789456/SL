@@ -140,22 +140,20 @@
                     layer.confirm('真的删除行么', function(index){
                         // 异步请求删除
                         $.ajax({
-                            url:'${ctx}/gp/del/'+data.id,
-                            type:'post',
-                            success:function (data) {
-                                if(data.code == 2000){
-
-
-                                    renderTable();
-                                    layer.msg(data.msg)
-                                    layer.close(index);
-                                    // obj.del();
-
+                            url: "${ctx}/sys/gp/del",
+                            type: "POST",
+                            data:{id:data.id},
+                            success: function (msg) {
+                                if(data.id === "0"){
+                                    layer.msg("删除失败")
                                 } else {
-                                    layer.msg(data.msg)
+                                    obj.del();
+                                    renderTable();
+                                    layer.msg("删除成功");
+                                    layer.close(index);
                                 }
                             }
-                        })
+                        });
 
                     });
                 } else if(obj.event === 'edit'){

@@ -18,4 +18,8 @@ public interface BasicsParameterDao {
     int updateByPrimaryKey(BasicsParameter record);
 
     List<BasicsParameter> find();
+
+    int delByIds(List<Integer> ids);
+
+    int delById(Long id);
 }

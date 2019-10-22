@@ -3,10 +3,10 @@ package com.qiudaozhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.mapper.AuRoleDao;
-import com.qiudaozhang.mapper.AuUserDao;
+import com.qiudaozhang.mapper.RoleDao;
+import com.qiudaozhang.mapper.UserDao;
 import com.qiudaozhang.mapper.DataDictionaryDao;
-import com.qiudaozhang.model.AuUser;
+import com.qiudaozhang.model.User;
 import com.qiudaozhang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,19 +18,19 @@ import java.util.List;
 public class UserServiceImpl  implements UserService {
 
     @Autowired
-    private AuUserDao userDao;
+    private UserDao userDao;
 
     @Autowired
     private DataDictionaryDao dataDictionaryMapper;
 
     @Autowired
-    private AuRoleDao roleMapper;
+    private RoleDao roleMapper;
 
     @Override
     public ResponseCode find(Integer pageSize, Integer pageNum, String loginCode) {
         PageHelper.startPage(pageNum, pageSize);
-        List<AuUser> l = userDao.findByLoginCodeLike(loginCode);
-        PageInfo<AuUser> p = new PageInfo<>(l);
+        List<User> l = userDao.findByLoginCodeLike(loginCode);
+        PageInfo<User> p = new PageInfo<>(l);
         ResponseCode code = new ResponseCode();
         code.setData(l);
         code.setCount(p.getTotal());
@@ -39,7 +39,7 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
-    public void add(AuUser user) {
+    public void add(User user) {
         // todo
         // 处理得到角色ID和角色名称
         //
@@ -99,5 +99,15 @@ public class UserServiceImpl  implements UserService {
             code.setMsg("未知ID");
         }
         return code;
+    }
+
+    @Override
+    public User findByLoginCode(String loginCode) {
+        return userDao.findDetailByLoginCode(loginCode);
+    }
+
+    @Override
+    public void updateLoginTime(Long id, LocalDateTime now) {
+        userDao.updateLoginTime(id,now);
     }
 }

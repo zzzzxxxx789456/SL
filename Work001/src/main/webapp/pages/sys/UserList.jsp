@@ -77,7 +77,6 @@
                         ,{field: 'roleName', title: '角色', width:180, sort: true, fixed: 'left'}
                         ,{field: 'userTypeName', title: '会员类型', width:180, sort: true, fixed: 'left'}
                         ,{field: 'referCode', title: '推荐人用户名', width:180, sort: true, fixed: 'left'}
-                        // 手机号码中间四位保护
                         ,{field: 'lastUpdateTimeStr', title: '最后修改时间', width:280, sort: true, fixed: 'left'}
                         ,{field:'lock', title:'状态(启用/禁用)', width:150, templet: '#checkboxTpl', unresize: true}
                         ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
@@ -130,27 +129,26 @@
             table.on('tool(test)', function(obj){
                 var data = obj.data;
                 //console.log(obj)
+                if (obj.event === 'detail') {
+                    layer.msg('ID：' + data.id + ' 的查看操作');
+                }
                 if(obj.event === 'del'){
                     layer.confirm('真的删除行么', function(index){
-                        // 异步请求删除
                         $.ajax({
-                            url:'${ctx}sys/u/del/'+data.id,
-                            type:'post',
-                            success:function (data) {
-                                if(data.code == 2000){
-
-
-                                    renderTable();
-                                    layer.msg(data.msg)
-                                    layer.close(index);
-                                    // obj.del();
-
+                            url: "${ctx}/sys/u/del",
+                            type: "POST",
+                            data:{id:data.id},
+                            success: function (msg) {
+                                if(data.id === "0"){
+                                    layer.msg("删除失败")
                                 } else {
-                                    layer.msg(data.msg)
+                                    obj.del();
+                                    renderTable();
+                                    layer.msg("删除成功");
+                                    layer.close(index);
                                 }
                             }
-                        })
-
+                        });
                     });
                 } else if(obj.event === 'edit'){
 

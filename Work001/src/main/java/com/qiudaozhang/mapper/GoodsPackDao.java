@@ -20,4 +20,8 @@ public interface GoodsPackDao {
     int updateByPrimaryKey(GoodsPack record);
 
     List<GoodsPack> findByGoodsPickNameLike(String goodsPickName);
+
+    int delByIds(List<Integer> ids);
+
+    int delById(Long id);
 }

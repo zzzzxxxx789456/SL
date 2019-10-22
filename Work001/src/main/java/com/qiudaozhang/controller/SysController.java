@@ -3,8 +3,8 @@ package com.qiudaozhang.controller;
 import com.qiudaozhang.components.FileConfig;
 import com.qiudaozhang.dto.IdDto;
 import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.model.AuRole;
-import com.qiudaozhang.model.AuUser;
+import com.qiudaozhang.model.Role;
+import com.qiudaozhang.model.User;
 import com.qiudaozhang.model.Country;
 import com.qiudaozhang.model.DataDictionary;
 import com.qiudaozhang.service.*;
@@ -41,7 +41,7 @@ public class SysController {
     private BasicDataService basicDataService;
 
     @Autowired
-    private DictionaryService dictionaryService;
+    private DataDictionaryService dictionaryService;
 
     @Autowired
     private CountryService countryService;
@@ -65,7 +65,7 @@ public class SysController {
     @RequestMapping("u/to/add")
     public String userToAdd(Model model){
         // 获取所有的角色
-        List<AuRole> roles = roleService.findAll();
+        List<Role> roles = roleService.findAll();
         model.addAttribute("roles",roles);
         // 获取所有会员类型
         List<DataDictionary> userTypes = dictionaryService.findByTypeCode("USER_TYPE");
@@ -80,13 +80,13 @@ public class SysController {
     }
 
     @RequestMapping("u/add")
-    public String add(AuUser user,
+    public String add(User user,
                       @RequestParam("idCardPicPosPathFile") MultipartFile idCardPicPosPathFile ,
                       @RequestParam("idCardPicNegPathFile") MultipartFile idCardPicNegPathFile ,
                       @RequestParam("bankPicPathFile") MultipartFile bankPicPathFile,
                       HttpSession session
     ){
-        AuUser sessionUser = (AuUser) session.getAttribute("sessionUser");
+        User sessionUser = (User) session.getAttribute("sessionUser");
         // 处理文件上传
         File dest1  = new File(fileConfig.getUploadRootPath(),idCardPicPosPathFile.getOriginalFilename());
         File dest2  = new File(fileConfig.getUploadRootPath(),idCardPicNegPathFile.getOriginalFilename());
@@ -106,16 +106,16 @@ public class SysController {
         return "sys/UserList";
     }
 
-    @RequestMapping("u/del/{id}")
+    @RequestMapping("u/del")
     @ResponseBody
-    public ResponseCode del(@PathVariable("id") Long id){
+    public ResponseCode userDel(@RequestParam(value = "id") Long id){
         ResponseCode code = userService.delById(id);
         return code;
     }
 
     @RequestMapping("u/delGroup")
     @ResponseBody
-    public ResponseCode delGroup(@RequestBody IdDto idDto){
+    public ResponseCode userDelGroup(@RequestBody IdDto idDto){
         ResponseCode code = userService.delGroup(idDto.getIds());
         return code;
     }
@@ -132,6 +132,20 @@ public class SysController {
         return code;
     }
 
+    @RequestMapping("r/del")
+    @ResponseBody
+    public ResponseCode roleDel(@RequestParam(value = "id") Long id){
+        ResponseCode code = roleService.delById(id);
+        return code;
+    }
+
+    @RequestMapping("r/delGroup")
+    @ResponseBody
+    public ResponseCode roleDelGroup(@RequestBody IdDto idDto){
+        ResponseCode code = roleService.delGroup(idDto.getIds());
+        return code;
+    }
+
     @RequestMapping("g/to/list")
     public String goodsToList() {
         return "sys/GoodsList";
@@ -142,6 +156,20 @@ public class SysController {
     public ResponseCode goodsList(@RequestParam(value = "limit") Integer pageSize, @RequestParam(value = "page") Integer pageNum,
                                   @RequestParam(value = "goodsName",defaultValue = "") String goodsName){
         ResponseCode code  = goodsService.find(pageSize,pageNum,goodsName);
+        return code;
+    }
+
+    @RequestMapping("g/del")
+    @ResponseBody
+    public ResponseCode goodsDel(@RequestParam(value = "id") Long id){
+        ResponseCode code = goodsService.delById(id);
+        return code;
+    }
+
+    @RequestMapping("g/delGroup")
+    @ResponseBody
+    public ResponseCode goodsDelGroup(@RequestBody IdDto idDto){
+        ResponseCode code = goodsService.delGroup(idDto.getIds());
         return code;
     }
 
@@ -157,6 +185,22 @@ public class SysController {
         ResponseCode code  = goodsPackService.find(pageSize,pageNum,goodsPickName);
         return code;
     }
+
+    @RequestMapping("gp/del")
+    @ResponseBody
+    public ResponseCode goodsPickDel(@RequestParam(value = "id") Long id){
+        ResponseCode code = goodsPackService.delById(id);
+        return code;
+    }
+
+    @RequestMapping("gp/delGroup")
+    @ResponseBody
+    public ResponseCode goodsPickDelGroup(@RequestBody IdDto idDto){
+        ResponseCode code = goodsPackService.delGroup(idDto.getIds());
+        return code;
+    }
+
+
     @RequestMapping("bp/to/list")
     public String basicsToList() {
         return "sys/BasicDataList";
@@ -168,6 +212,22 @@ public class SysController {
         ResponseCode code  = basicDataService.find(pageSize,pageNum);
         return code;
     }
+
+    @RequestMapping("bp/del")
+    @ResponseBody
+    public ResponseCode basicsDel(@RequestParam(value = "id") Long id){
+        ResponseCode code = basicDataService.delById(id);
+        return code;
+    }
+
+    @RequestMapping("bp/delGroup")
+    @ResponseBody
+    public ResponseCode basicsDelGroup(@RequestBody IdDto idDto){
+        ResponseCode code = basicDataService.delGroup(idDto.getIds());
+        return code;
+    }
+
+
     @RequestMapping("dd/to/list")
     public String dictionaryToList() {
         return "sys/DictionaryList";
@@ -177,6 +237,20 @@ public class SysController {
     @ResponseBody
     public ResponseCode dictionaryList(@RequestParam(value = "limit") Integer pageSize, @RequestParam(value = "page") Integer pageNum){
         ResponseCode code  = dictionaryService.find(pageSize,pageNum);
+        return code;
+    }
+
+    @RequestMapping("dd/del")
+    @ResponseBody
+    public ResponseCode dictionaryDel(@RequestParam(value = "id") Long id){
+        ResponseCode code = dictionaryService.delById(id);
+        return code;
+    }
+
+    @RequestMapping("dd/delGroup")
+    @ResponseBody
+    public ResponseCode dictionaryDelGroup(@RequestBody IdDto idDto){
+        ResponseCode code = dictionaryService.delGroup(idDto.getIds());
         return code;
     }
 }

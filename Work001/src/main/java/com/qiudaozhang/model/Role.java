@@ -5,13 +5,14 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * au_role
  * @author 
  */
-@Setter
 @Getter
+@Setter
 public class Role implements Serializable {
     /**
      * 主键ID
@@ -43,7 +44,14 @@ public class Role implements Serializable {
      */
     private String createdBy;
 
-    private static final long serialVersionUID = 1L;
+    /**
+     * 最新更新时间
+     */
+    private LocalDateTime lastUpdateTime;
 
-
+    public String getLastUpdateTimeStr(){
+        if(this.lastUpdateTime == null)
+            return "";
+        return this.lastUpdateTime.toLocalDate() + " " + (this.lastUpdateTime.toLocalTime().toString().equals("00:00") ? "00:00:00":this.lastUpdateTime.toLocalTime());
+    }
 }

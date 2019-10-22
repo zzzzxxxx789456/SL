@@ -26,4 +26,18 @@
       where type_Code = #{cardType} and
       value_id = #{valueId}
     </select>
+  <delete id="delById">
+        delete from data_dictionary
+        where id = #{id}
+    </delete>
+  <delete id="delByIds">
+    delete
+    from data_dictionary
+    <where>
+      id in
+      <foreach collection="list" open="(" close=")" separator="," item="item">
+        #{item}
+      </foreach>
+    </where>
+  </delete>
 </mapper>

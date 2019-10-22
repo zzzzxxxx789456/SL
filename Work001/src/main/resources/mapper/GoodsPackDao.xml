@@ -43,4 +43,18 @@
       </if>
     </where>
   </select>
+  <delete id="delById">
+        delete from goods_pack
+        where id = #{id}
+    </delete>
+  <delete id="delByIds">
+    delete
+    from goods_pack
+    <where>
+      id in
+      <foreach collection="list" open="(" close=")" separator="," item="item">
+        #{item}
+      </foreach>
+    </where>
+  </delete>
 </mapper>

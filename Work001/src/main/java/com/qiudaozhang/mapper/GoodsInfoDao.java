@@ -21,4 +21,8 @@ public interface GoodsInfoDao {
     int updateByPrimaryKey(GoodsInfo record);
 
     List<GoodsInfo> findByGoodsNameLike(String goodsName);
+
+    int delByIds(List<Integer> ids);
+
+    int delById(Long id);
 }

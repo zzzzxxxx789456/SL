@@ -1,13 +1,17 @@
 package com.qiudaozhang.service;
 
+import com.qiudaozhang.dto.ResponseCode;
 import com.qiudaozhang.model.DataDictionary;
 
 import java.util.List;
 
-/**
- * @author 深圳邱道长
- * @since 2019/10/7
- */
 public interface DataDictionaryService {
-    List<DataDictionary> findByTypeCode(String cardType);
+
+    ResponseCode find(Integer pageSize, Integer pageNum);
+
+    List<DataDictionary> findByTypeCode(String user_type);
+
+    ResponseCode delById(Long id);
+
+    ResponseCode delGroup(List<Integer> ids);
 }

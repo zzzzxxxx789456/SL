@@ -23,4 +23,8 @@ public interface DataDictionaryDao {
     List<DataDictionary> findByTypeCode(@Param("cardType") String user_type);
 
     String findByTypCodeValueId(@Param("cardType") String cardType, @Param("valueId") Integer valueId);
+
+    int delByIds(List<Integer> ids);
+
+    int delById(Long id);
 }

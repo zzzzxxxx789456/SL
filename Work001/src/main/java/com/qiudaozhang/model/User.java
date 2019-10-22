@@ -4,15 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
  * au_user
  * @author 
  */
-@Setter
 @Getter
+@Setter
 public class User implements Serializable {
     /**
      * 主键ID
@@ -47,7 +46,7 @@ public class User implements Serializable {
     /**
      * 生日
      */
-    private LocalDate birthday;
+    private LocalDateTime birthday;
 
     /**
      * 证件类型id
@@ -155,20 +154,19 @@ public class User implements Serializable {
     private String accountHolder;
 
     /**
-     * 身份证照片正面存放路径
-     */
-    private String idCardPicPosPath;
-
-    /**
-     * 身份证照片反面存放路径
+     * 身份证照片反面图路径
      */
     private String idCardPicNegPath;
+
+    /**
+     * 身份证照片正面图路径
+     */
+    private String idCardPicPosPath;
 
     /**
      * 银行卡照片存放路径
      */
     private String bankPicPath;
-
 
     /**
      * 推荐人
@@ -187,5 +185,4 @@ public class User implements Serializable {
             return "";
         return this.lastUpdateTime.toLocalDate() + " " + (this.lastUpdateTime.toLocalTime().toString().equals("00:00") ? "00:00:00":this.lastUpdateTime.toLocalTime());
     }
-
 }

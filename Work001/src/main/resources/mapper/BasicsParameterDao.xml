@@ -12,6 +12,20 @@
   <sql id="Base_Column_List">
     ID, `NAME`, CODE, `VALUE`, DESCRIPTION, DR
   </sql>
+  <delete id="delById">
+        delete from basics_parameter
+        where id = #{id}
+    </delete>
+  <delete id="delByIds">
+    delete
+    from basics_parameter
+    <where>
+      id in
+      <foreach collection="list" open="(" close=")" separator="," item="item">
+        #{item}
+      </foreach>
+    </where>
+  </delete>
   <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

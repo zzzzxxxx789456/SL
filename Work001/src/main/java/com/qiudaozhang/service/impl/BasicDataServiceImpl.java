@@ -28,4 +28,37 @@ public class BasicDataServiceImpl implements BasicDataService {
         code.setCode(0);
         return code;
     }
+
+    @Override
+    public ResponseCode delById(Long id) {
+        ResponseCode code = new ResponseCode();
+        if (id == null) {
+            code.setCode(ResponseCode.FAIL);
+            code.setMsg("非法ID");
+            return code;
+        }
+        int row = basicsParameterDao.delById(id);
+        if (row == 1) {
+            code.setCode(ResponseCode.SUCCESS);
+            code.setMsg("删除成功");
+        } else {
+            code.setCode(ResponseCode.FAIL);
+            code.setMsg("未知ID");
+        }
+        return code;
+    }
+
+    @Override
+    public ResponseCode delGroup(List<Integer> ids) {
+        ResponseCode code = new ResponseCode();
+        int row = basicsParameterDao.delByIds(ids);
+        if (row > 0) {
+            code.setCode(ResponseCode.SUCCESS);
+            code.setMsg("批量删除成功");
+        } else {
+            code.setCode(ResponseCode.FAIL);
+            code.setMsg("批量删除失败");
+        }
+        return code;
+    }
 }
