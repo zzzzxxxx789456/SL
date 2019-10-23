@@ -3,35 +3,32 @@ package com.qiudaozhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.mapper.DataDictionaryDao;
-import com.qiudaozhang.model.DataDictionary;
-import com.qiudaozhang.service.DataDictionaryService;
+import com.qiudaozhang.mapper.GoodsInfoDao;
+import com.qiudaozhang.model.GoodsInfo;
+import com.qiudaozhang.model.User;
+import com.qiudaozhang.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class DataDictionaryServiceImpl implements DataDictionaryService {
+public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
-    private DataDictionaryDao dataDictionaryDao;
+    private GoodsInfoDao goodsInfoDao;
 
     @Override
-    public ResponseCode find(Integer pageSize, Integer pageNum) {
+    public ResponseCode find(Integer pageSize, Integer pageNum, String goodsName) {
         PageHelper.startPage(pageNum, pageSize);
-        List<DataDictionary> l = dataDictionaryDao.find();
-        PageInfo<DataDictionary> p = new PageInfo<>(l);
+        List<GoodsInfo> l = goodsInfoDao.findByGoodsNameLike(goodsName);
+        PageInfo<GoodsInfo> p = new PageInfo<>(l);
         ResponseCode code = new ResponseCode();
         code.setData(l);
         code.setCount(p.getTotal());
         code.setCode(0);
         return code;
-    }
-
-    @Override
-    public List<DataDictionary> findByTypeCode(String user_type) {
-        return dataDictionaryDao.findByTypeCode(user_type);
     }
 
     @Override
@@ -42,7 +39,7 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
             code.setMsg("非法ID");
             return code;
         }
-        int row = dataDictionaryDao.delById(id);
+        int row = goodsInfoDao.delById(id);
         if (row == 1) {
             code.setCode(ResponseCode.SUCCESS);
             code.setMsg("删除成功");
@@ -56,7 +53,7 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
     @Override
     public ResponseCode delGroup(List<Integer> ids) {
         ResponseCode code = new ResponseCode();
-        int row = dataDictionaryDao.delByIds(ids);
+        int row = goodsInfoDao.delByIds(ids);
         if (row > 0) {
             code.setCode(ResponseCode.SUCCESS);
             code.setMsg("批量删除成功");
@@ -64,6 +61,27 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
             code.setCode(ResponseCode.FAIL);
             code.setMsg("批量删除失败");
         }
+        return code;
+    }
+
+    @Override
+    public void add(User user, GoodsInfo goodsInfo) {
+        // 处理推荐人
+        goodsInfo.setCreatedBy(user.getRecommender().getLoginCode());
+        // 处理创建日期
+        goodsInfo.setCreateTime(LocalDateTime.now());
+        goodsInfoDao.insert(goodsInfo);
+    }
+
+    @Override
+    public ResponseCode findByState(Integer pageSize, Integer pageNum, String goodsName) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<GoodsInfo> l = goodsInfoDao.findByGoodsNameLikeAndState(goodsName);
+        PageInfo<GoodsInfo> p = new PageInfo<>(l);
+        ResponseCode code = new ResponseCode();
+        code.setData(l);
+        code.setCount(p.getTotal());
+        code.setCode(0);
         return code;
     }
 }

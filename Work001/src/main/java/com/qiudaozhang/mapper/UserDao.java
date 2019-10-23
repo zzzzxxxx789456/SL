@@ -7,28 +7,25 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface UserDao {
+    int deleteByPrimaryKey(Long id);
 
-    void insert(User user);
+    int insert(User record);
 
-    User findByUserName(String userName);
+    int insertSelective(User record);
 
-    User findByLoginCode(String loginCode);
+    User selectByPrimaryKey(Long id);
 
-    void modifyPwd(@Param("loginCode") String loginCode, @Param("newPwd") String newPwd);
+    int updateByPrimaryKeySelective(User record);
 
-    void modifyPwd2(@Param("loginCode") String loginCode, @Param("newPwd2") String newPwd2);
+    int updateByPrimaryKey(User record);
 
-    User findDetailByLoginCode(String loginCode);
-
-    void modify(User user);
-
-    List<User> find();
-
-    List<User> findByLoginCodeLike();
-
-    int delById(Long id);
+    List<User> findByLoginCodeLike(String loginCode);
 
     int delByIds(List<Integer> ids);
 
-    void updateLoginTime(@Param("id") Long id, @Param("now") LocalDateTime now);
+    int delById(Long id);
+
+    User findDetailByLoginCode(String loginCode);
+
+    void updateLoginTime(@Param("id")Long id, @Param("now")LocalDateTime now);
 }

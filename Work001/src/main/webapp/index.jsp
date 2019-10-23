@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%--
   Created by IntelliJ IDEA.
   User: 61048
@@ -84,6 +85,28 @@
                                 </div>
                             </div>
                         </div>
+=======
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="${ctx}/layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <form class="layui-form" action="${ctx}/u/login" method="post">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">登录账号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="loginCode" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+>>>>>>> 7c779a0df00b4ae94779cfa512cd1a61af9cb255
                     </div>
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title">关于加盟店政策补贴说明&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -209,6 +232,7 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title">2011年度奖励方案&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                             &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -451,3 +475,24 @@
 </script>
 </body>
 </html>
+=======
+                </div>
+            </form>
+        </div>
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © layui.com - 底部固定区域
+        </div>
+    </div>
+    <script src="${ctx}/layui/layui.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use(['element','form','jquery'], function(){
+            var element = layui.element;
+            var form = layui.form;
+            var $ = layui.jquery;
+        });
+    </script>
+</body>
+</html>
+>>>>>>> 7c779a0df00b4ae94779cfa512cd1a61af9cb255

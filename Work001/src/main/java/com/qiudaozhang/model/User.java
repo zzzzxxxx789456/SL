@@ -4,15 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
  * au_user
  * @author 
  */
-@Setter
 @Getter
+@Setter
 public class User implements Serializable {
     /**
      * 主键ID

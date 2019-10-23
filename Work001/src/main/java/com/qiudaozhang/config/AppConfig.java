@@ -54,8 +54,5 @@ public class AppConfig implements WebMvcConfigurer {
         configurer.enable();
     }
 
-//    @Override
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/");
-//    }
+
 }

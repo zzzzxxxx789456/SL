@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiudaozhang.mapper.BasicsParameterDao">
+  <resultMap id="BaseResultMap" type="com.qiudaozhang.model.BasicsParameter">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="CODE" jdbcType="VARCHAR" property="code" />
+    <result column="VALUE" jdbcType="VARCHAR" property="value" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="DR" jdbcType="VARCHAR" property="dr" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, `NAME`, CODE, `VALUE`, DESCRIPTION, DR
+  </sql>
+  <delete id="delById">
+        delete from basics_parameter
+        where id = #{id}
+    </delete>
+  <delete id="delByIds">
+    delete
+    from basics_parameter
+    <where>
+      id in
+      <foreach collection="list" open="(" close=")" separator="," item="item">
+        #{item}
+      </foreach>
+    </where>
+  </delete>
+  <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from basics_parameter
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from basics_parameter
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.qiudaozhang.model.BasicsParameter" useGeneratedKeys="true">
+    insert into basics_parameter (`NAME`, CODE, `VALUE`,
+      DESCRIPTION, DR)
+    values (#{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR},
+      #{description,jdbcType=VARCHAR}, #{dr,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="com.qiudaozhang.model.BasicsParameter" useGeneratedKeys="true">
+    insert into basics_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `NAME`,
+      </if>
+      <if test="code != null">
+        CODE,
+      </if>
+      <if test="value != null">
+        `VALUE`,
+      </if>
+      <if test="description != null">
+        DESCRIPTION,
+      </if>
+      <if test="dr != null">
+        DR,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qiudaozhang.model.BasicsParameter">
+    update basics_parameter
+    <set>
+      <if test="name != null">
+        `NAME` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        CODE = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        `VALUE` = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        DESCRIPTION = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="dr != null">
+        DR = #{dr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qiudaozhang.model.BasicsParameter">
+    update basics_parameter
+    set `NAME` = #{name,jdbcType=VARCHAR},
+      CODE = #{code,jdbcType=VARCHAR},
+      `VALUE` = #{value,jdbcType=VARCHAR},
+      DESCRIPTION = #{description,jdbcType=VARCHAR},
+      DR = #{dr,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -3,25 +3,27 @@ package com.qiudaozhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.mapper.DataDictionaryDao;
-import com.qiudaozhang.model.DataDictionary;
-import com.qiudaozhang.service.DataDictionaryService;
+import com.qiudaozhang.mapper.RoleDao;
+import com.qiudaozhang.model.Role;
+import com.qiudaozhang.model.User;
+import com.qiudaozhang.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
-public class DataDictionaryServiceImpl implements DataDictionaryService {
+public class RoleServiceImpl implements RoleService {
 
     @Autowired
-    private DataDictionaryDao dataDictionaryDao;
+    private RoleDao roleDao;
 
     @Override
     public ResponseCode find(Integer pageSize, Integer pageNum) {
         PageHelper.startPage(pageNum, pageSize);
-        List<DataDictionary> l = dataDictionaryDao.find();
-        PageInfo<DataDictionary> p = new PageInfo<>(l);
+        List<Role> l = roleDao.find();
+        PageInfo<Role> p = new PageInfo<>(l);
         ResponseCode code = new ResponseCode();
         code.setData(l);
         code.setCount(p.getTotal());
@@ -30,8 +32,8 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
     }
 
     @Override
-    public List<DataDictionary> findByTypeCode(String user_type) {
-        return dataDictionaryDao.findByTypeCode(user_type);
+    public List<Role> findAll() {
+        return roleDao.find();
     }
 
     @Override
@@ -42,7 +44,7 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
             code.setMsg("非法ID");
             return code;
         }
-        int row = dataDictionaryDao.delById(id);
+        int row = roleDao.delById(id);
         if (row == 1) {
             code.setCode(ResponseCode.SUCCESS);
             code.setMsg("删除成功");
@@ -56,7 +58,7 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
     @Override
     public ResponseCode delGroup(List<Integer> ids) {
         ResponseCode code = new ResponseCode();
-        int row = dataDictionaryDao.delByIds(ids);
+        int row = roleDao.delByIds(ids);
         if (row > 0) {
             code.setCode(ResponseCode.SUCCESS);
             code.setMsg("批量删除成功");
@@ -65,5 +67,14 @@ public class DataDictionaryServiceImpl implements DataDictionaryService {
             code.setMsg("批量删除失败");
         }
         return code;
+    }
+
+    @Override
+    public void add(User user, Role role) {
+        // 处理推荐人
+        role.setCreatedBy(user.getRecommender().getLoginCode());
+        // 处理创建日期
+        role.setCreateDate(LocalDate.now());
+        roleDao.insert(role);
     }
 }
