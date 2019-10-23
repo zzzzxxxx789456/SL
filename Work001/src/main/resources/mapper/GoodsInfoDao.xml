@@ -13,31 +13,103 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
     <result column="created_by" jdbcType="VARCHAR" property="createdBy" />
-  </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.qiudaozhang.model.GoodsInfoWithBLOBs">
     <result column="goods_format" jdbcType="LONGVARCHAR" property="goodsFormat" />
     <result column="note" jdbcType="LONGVARCHAR" property="note" />
   </resultMap>
   <sql id="Base_Column_List">
     id, goods_SN, goods_name, market_price, real_price, `state`, num, unit, create_time, 
-    last_update_time, created_by
+    last_update_time, created_by,goods_format, note
   </sql>
-  <sql id="Blob_Column_List">
-    goods_format, note
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
     from goods_info
     where id = #{id,jdbcType=BIGINT}
   </select>
+  <insert id="insert">
+    insert into goods_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="goodsSn != null " >
+        goods_SN,
+      </if>
+      <if test="goodsName != null " >
+        goods_name,
+      </if>
+      <if test="marketPrice != null " >
+        market_price,
+      </if>
+      <if test="realPrice != null " >
+        real_price,
+      </if>
+      <if test="state != null " >
+        state,
+      </if>
+      <if test="num != null " >
+        num,
+      </if>
+      <if test="unit != null " >
+        unit,
+      </if>
+      <if test="createTime != null " >
+        create_time,
+      </if>
+      <if test="lastUpdateTime != null " >
+        last_update_time,
+      </if>
+      <if test="createdBy != null " >
+        created_by,
+      </if>
+    </trim>
+    <trim prefix="value(" suffix=")" suffixOverrides=",">
+      <if test="goodsSn != null " >
+        #{goodsSn},
+      </if>
+      <if test="goodsName != null " >
+        #{goodsName},
+      </if>
+      <if test="marketPrice != null " >
+        #{marketPrice},
+      </if>
+      <if test="realPrice != null " >
+        #{realPrice},
+      </if>
+      <if test="state != null " >
+        #{state},
+      </if>
+      <if test="num != null " >
+        #{num},
+      </if>
+      <if test="unit != null " >
+        #{unit},
+      </if>
+      <if test="createTime != null " >
+        #{createTime},
+      </if>
+      <if test="lastUpdateTime != null " >
+        #{lastUpdateTime},
+      </if>
+      <if test="createdBy != null " >
+        #{createdBy},
+      </if>
+    </trim>
+  </insert>
   <select id="findByGoodsNameLike" resultType="com.qiudaozhang.model.GoodsInfo">
     select
     <include refid="Base_Column_List" />
     from goods_info
     <where>
+      <if test="goodsName != null">
+        <bind name="newGoodsName" value="'%'+goodsName+'%'"/>
+        goods_name like #{newGoodsName}
+      </if>
+    </where>
+  </select>
+  <select id="findByGoodsNameLikeAndState" resultType="com.qiudaozhang.model.GoodsInfo">
+    select
+    <include refid="Base_Column_List" />
+    from goods_info
+    <where>
+        state = 1,
       <if test="goodsName != null">
         <bind name="newGoodsName" value="'%'+goodsName+'%'"/>
         goods_name like #{newGoodsName}

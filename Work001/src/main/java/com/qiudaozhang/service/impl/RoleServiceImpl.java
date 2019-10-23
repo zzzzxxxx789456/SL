@@ -5,10 +5,12 @@ import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
 import com.qiudaozhang.mapper.RoleDao;
 import com.qiudaozhang.model.Role;
+import com.qiudaozhang.model.User;
 import com.qiudaozhang.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -65,5 +67,14 @@ public class RoleServiceImpl implements RoleService {
             code.setMsg("批量删除失败");
         }
         return code;
+    }
+
+    @Override
+    public void add(User user, Role role) {
+        // 处理推荐人
+        role.setCreatedBy(user.getRecommender().getLoginCode());
+        // 处理创建日期
+        role.setCreateDate(LocalDate.now());
+        roleDao.insert(role);
     }
 }

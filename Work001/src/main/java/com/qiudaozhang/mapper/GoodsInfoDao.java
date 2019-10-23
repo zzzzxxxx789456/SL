@@ -1,22 +1,21 @@
 package com.qiudaozhang.mapper;
 
 import com.qiudaozhang.model.GoodsInfo;
-import com.qiudaozhang.model.GoodsInfoWithBLOBs;
 
 import java.util.List;
 
 public interface GoodsInfoDao {
     int deleteByPrimaryKey(Long id);
 
-    int insert(GoodsInfoWithBLOBs record);
+    int insert(GoodsInfo record);
 
-    int insertSelective(GoodsInfoWithBLOBs record);
+    int insertSelective(GoodsInfo record);
 
-    GoodsInfoWithBLOBs selectByPrimaryKey(Long id);
+    GoodsInfo selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(GoodsInfoWithBLOBs record);
+    int updateByPrimaryKeySelective(GoodsInfo record);
 
-    int updateByPrimaryKeyWithBLOBs(GoodsInfoWithBLOBs record);
+    int updateByPrimaryKeyWithBLOBs(GoodsInfo record);
 
     int updateByPrimaryKey(GoodsInfo record);
 
@@ -25,4 +24,6 @@ public interface GoodsInfoDao {
     int delByIds(List<Integer> ids);
 
     int delById(Long id);
+
+    List<GoodsInfo> findByGoodsNameLikeAndState(String goodsName);
 }

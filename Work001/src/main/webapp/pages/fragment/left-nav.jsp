@@ -15,33 +15,21 @@
                 <a class="" href="javascript:;">系统管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/sys/u/to/list">用户管理</a></dd>
-<<<<<<< HEAD
-                    <dd><a href="${ctx}/role/to/list">角色管理</a></dd>
-
-=======
                     <dd><a href="${ctx}/sys/r/to/list">角色管理</a></dd>
                     <dd><a href="${ctx}">权限管理</a></dd>
                     <dd><a href="${ctx}/sys/g/to/list">商品管理</a></dd>
                     <dd><a href="${ctx}/sys/gp/to/list">商品套餐管理</a></dd>
                     <dd><a href="${ctx}/sys/bp/to/list">基础数据</a></dd>
                     <dd><a href="${ctx}/sys/dd/to/list">数据字典</a></dd>
->>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">会员管理</a>
                 <dl class="layui-nav-child">
-<<<<<<< HEAD
-                    <dd><a href="${ctx}/u/to/register">注册新会员</a></dd>
-                    <dd><a href="${ctx}/u/to/list">新会员管理</a></dd>
-                    <dd><a href="${ctx}/u/to/modify">修改本人资料</a></dd>
-                    <dd><a href="${ctx}/u/to/modify/pwd">修改本人密码</a></dd>
-=======
                     <dd><a href="${ctx}">注册新会员</a></dd>
                     <dd><a href="${ctx}">新会员管理</a></dd>
                     <dd><a href="${ctx}">修改本人资料</a></dd>
                     <dd><a href="${ctx}">修改本人密码</a></dd>
->>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
                 </dl>
             </li>
             <li class="layui-nav-item">

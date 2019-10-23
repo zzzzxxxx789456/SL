@@ -5,10 +5,12 @@ import com.github.pagehelper.PageInfo;
 import com.qiudaozhang.dto.ResponseCode;
 import com.qiudaozhang.mapper.GoodsInfoDao;
 import com.qiudaozhang.model.GoodsInfo;
+import com.qiudaozhang.model.User;
 import com.qiudaozhang.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -59,6 +61,27 @@ public class GoodsServiceImpl implements GoodsService {
             code.setCode(ResponseCode.FAIL);
             code.setMsg("批量删除失败");
         }
+        return code;
+    }
+
+    @Override
+    public void add(User user, GoodsInfo goodsInfo) {
+        // 处理推荐人
+        goodsInfo.setCreatedBy(user.getRecommender().getLoginCode());
+        // 处理创建日期
+        goodsInfo.setCreateTime(LocalDateTime.now());
+        goodsInfoDao.insert(goodsInfo);
+    }
+
+    @Override
+    public ResponseCode findByState(Integer pageSize, Integer pageNum, String goodsName) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<GoodsInfo> l = goodsInfoDao.findByGoodsNameLikeAndState(goodsName);
+        PageInfo<GoodsInfo> p = new PageInfo<>(l);
+        ResponseCode code = new ResponseCode();
+        code.setData(l);
+        code.setCount(p.getTotal());
+        code.setCode(0);
         return code;
     }
 }

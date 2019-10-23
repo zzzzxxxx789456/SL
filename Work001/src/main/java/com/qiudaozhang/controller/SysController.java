@@ -3,10 +3,7 @@ package com.qiudaozhang.controller;
 import com.qiudaozhang.components.FileConfig;
 import com.qiudaozhang.dto.IdDto;
 import com.qiudaozhang.dto.ResponseCode;
-import com.qiudaozhang.model.Role;
-import com.qiudaozhang.model.User;
-import com.qiudaozhang.model.Country;
-import com.qiudaozhang.model.DataDictionary;
+import com.qiudaozhang.model.*;
 import com.qiudaozhang.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -132,6 +129,18 @@ public class SysController {
         return code;
     }
 
+    @RequestMapping("r/to/add")
+    public String roleToAdd(){
+        return "sys/add/RoleAdd";
+    }
+    @RequestMapping("r/add")
+    public String roleAdd(User user,Role role,HttpSession session){
+        User sessionUser = (User) session.getAttribute("sessionUser");
+        user.setRecommender(sessionUser);
+        roleService.add(user,role);
+        return "sys/RoleList";
+    }
+
     @RequestMapping("r/del")
     @ResponseBody
     public ResponseCode roleDel(@RequestParam(value = "id") Long id){
@@ -159,6 +168,26 @@ public class SysController {
         return code;
     }
 
+    @RequestMapping("g/gpList")
+    @ResponseBody
+    public ResponseCode goodsStateList(@RequestParam(value = "limit") Integer pageSize, @RequestParam(value = "page") Integer pageNum,
+                                  @RequestParam(value = "goodsName",defaultValue = "") String goodsName){
+        ResponseCode code  = goodsService.findByState(pageSize,pageNum,goodsName);
+        return code;
+    }
+
+    @RequestMapping("g/to/add")
+    public String goodsToAdd(){
+        return "sys/add/GoodsAdd";
+    }
+    @RequestMapping("g/add")
+    public String goodsAdd(User user, GoodsInfo goodsInfo, HttpSession session){
+        User sessionUser = (User) session.getAttribute("sessionUser");
+        user.setRecommender(sessionUser);
+        goodsService.add(user,goodsInfo);
+        return "sys/GoodsList";
+    }
+
     @RequestMapping("g/del")
     @ResponseBody
     public ResponseCode goodsDel(@RequestParam(value = "id") Long id){
@@ -184,6 +213,14 @@ public class SysController {
                                   @RequestParam(value = "goodsPickName",defaultValue = "") String goodsPickName){
         ResponseCode code  = goodsPackService.find(pageSize,pageNum,goodsPickName);
         return code;
+    }
+
+    @RequestMapping("gp/to/add")
+    public String goodsPickToAdd(Model model){
+        // 获取所有套餐类型
+        List<DataDictionary> packTypes = dictionaryService.findByTypeCode("PACK_TYPE");
+        model.addAttribute("packTypes",packTypes);
+        return "sys/add/GoodsPickAdd";
     }
 
     @RequestMapping("gp/del")
