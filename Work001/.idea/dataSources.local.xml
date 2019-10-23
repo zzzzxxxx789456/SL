@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-<<<<<<< HEAD
     <data-source name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="c46d168c-f207-4e4f-a135-e1c548ed0e78">
-=======
-    <data-source name="jdbc:mysql://localhost:3306/slsaledb?serverTimezone=GMT%2B8" uuid="db2fe350-3542-4efe-95c3-16d3db228eee">
->>>>>>> 57300b52d2782f251b8a82dca3984dc13a8d3f61
       <database-info product="MySQL" version="8.0.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.17" exact-driver-version="5.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
